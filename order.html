@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>주문 / 결제 — 하이존바이오 안심결제</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f8;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#62df7d", "secondary": "#116d32", "on-tertiary-container": "#fefcff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#001946", "on-surface-variant": "#3e4a3d", "secondary-fixed-dim": "#84d991", "primary-container": "#00873a", "inverse-on-surface": "#f2f0f0", "tertiary-fixed-dim": "#b1c5ff", "primary-fixed-dim": "#62df7d", "tertiary-fixed": "#dae2ff", "on-background": "#1b1c1c", "on-secondary-fixed-variant": "#005322", "on-surface": "#1b1c1c", "surface-bright": "#fbf9f8", "on-error": "#ffffff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "tertiary": "#0055c9", "surface-tint": "#006e2d", "surface-container-highest": "#e4e2e2", "on-tertiary-fixed-variant": "#00419e", "surface-container-low": "#f5f3f3", "error": "#ba1a1a", "outline": "#6e7b6c", "on-secondary-container": "#1a7337", "primary-fixed": "#7ffc97", "on-primary-fixed-variant": "#005320", "secondary-fixed": "#9ff6ab", "surface-container-high": "#eae8e7", "on-primary-container": "#f7fff2", "outline-variant": "#bdcaba", "tertiary-container": "#036cfb", "surface-container": "#efeded", "secondary-container": "#9ff6ab", "surface-variant": "#e4e2e2", "surface": "#fbf9f8", "on-error-container": "#93000a", "on-secondary-fixed": "#002109", "primary": "#006b2c", "surface-container-lowest": "#ffffff", "inverse-surface": "#303030", "error-container": "#ffdad6", "on-primary-fixed": "#002109", "background": "#fbf9f8", "surface-dim": "#dbd9d9" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2rem", "gutter-mobile": "1rem", "space-2xs": "0.25rem", "margin-mobile": "1.25rem", "space-3xl": "4rem", "space-2xl": "3rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "display-lg-mobile": ["Montserrat"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Montserrat"], "headline-md": ["Montserrat"], "headline-xl": ["Montserrat"], "label-sm": ["Montserrat"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Montserrat"], "headline-lg": ["Montserrat"], "body-xl": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg": ["Montserrat"], "headline-xl-mobile": ["Montserrat"] }, "fontSize": { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "21px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["18px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "25px", "letterSpacing": "0", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } }</script>  <link rel="stylesheet" href="assets/style.css"/>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary/20">
+    <header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+      <div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs max-w-4xl mx-auto">
+        <a href="index.html" class="flex items-center gap-space-xs">
+          <img alt="HIGHZONE BIO" class="h-8 w-auto object-contain" src="assets/logo.png" onerror="this.src='stitch_high_definition_design_generator/logo.png/screen.png'"/>
+          <div class="flex flex-col justify-center leading-tight">
+            <span class="font-label-md text-label-md text-primary tracking-tight font-bold">하이존바이오</span>
+            <span class="font-label-sm text-[10px] text-on-surface-variant font-medium tracking-wider -mt-0.5">HIGHZONE BIO</span>
+          </div>
+        </a>
+        <div class="flex items-center gap-1">
+          <button type="button" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" data-path="search" title="검색">
+            <span class="material-symbols-outlined text-[22px]">search</span>
+          </button>
+          <a class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors relative" href="mypage.html#notifications" title="알림">
+            <span class="material-symbols-outlined text-[22px]">notifications</span>
+            <span class="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-error"></span>
+          </a>
+          <button type="button" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors relative" data-path="cart" title="장바구니">
+            <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+            <span class="cart-count-badge absolute top-1.5 right-1.5 min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">2</span>
+          </button>
+          <a href="mypage.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 text-on-primary hover:opacity-90 transition-opacity" title="마이페이지">
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter-mobile py-space-sm flex items-center justify-between bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-2">
+<a href="javascript:history.back()" aria-label="이전 화면으로 돌아가기" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[24px]">arrow_back</span></a>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">주문 / 결제</h1>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>안심결제 암호화</span>
+</div>
+</div>
+<div class="p-gutter-mobile flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+          주문 상품 (1건)
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">bolt</span> 당일 오후 3시 발송
+        </span>
+</div>
+<div class="flex gap-space-sm pt-space-xs">
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="바이오레드졸 및 시너지 에이스 인카 세트" class="w-full h-full object-cover" src="assets/prod_1.png"/>
+<div class="absolute bottom-0 inset-x-0 bg-primary/90 text-on-primary font-label-sm text-[9px] text-center py-0.5 tracking-tighter">
+            친환경 공시
+          </div>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-[10px] font-semibold">이온미네랄</span>
+<span class="font-label-sm text-[11px] text-primary font-bold">식물 활력 세트</span>
+</div>
+<h2 class="font-label-md text-label-md text-on-surface font-semibold truncate leading-tight">
+              바이오레드졸 500ml + 시너지 에이스 인카 500ml 세트
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">수량: 1개 · 무료배송</p>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-body-sm text-outline line-through">48,000원</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">10%</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">43,000<span class="text-body-sm font-normal">원</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+          배송지 정보
+        </span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline" type="button">
+          배송지 변경
+        </button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold">기본 배송지</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">김영호</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">010-9876-5432</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          전남 나주시 금천면 영산로 123-4 (나주배 농원 앞 저온창고)
+        </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="shipping-memo">배송 요청사항</label>
+<div class="relative">
+<select class="w-full h-12 bg-surface-container-lowest rounded-lg px-3 pr-9 font-body-md text-body-md text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none" id="shipping-memo">
+<option selected="">부재 시 문 앞(창고 앞)에 놓아주세요. 파손주의</option>
+<option>배송 전 미리 연락 바랍니다</option>
+<option>경비실 또는 마을회관에 맡겨주세요</option>
+<option>직접 입력하기</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-secondary text-[20px]">redeem</span>
+        쿠폰 및 적립금 혜택
+      </span>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between p-3 rounded-lg bg-secondary-container/30">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">첫 구매 농가 특별 환영쿠폰</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">30,000원 이상 결제 시 사용 가능</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-md text-label-md font-bold">
+<span>-3,000원</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">농가 적립금</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">보유 포인트 <span class="text-primary font-bold">2,500P</span></span>
+</div>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 bg-surface-container-lowest rounded-lg px-3 font-label-md text-label-md text-right text-on-surface font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-primary pr-8" id="point-input" placeholder="0" type="number" value="2000"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">P</span>
+</div>
+<button class="px-3.5 h-11 bg-surface-container-high hover:bg-surface-container-highest rounded-lg font-label-sm text-label-sm text-on-surface font-bold transition-colors" id="point-use-all-btn" type="button">
+              전액사용
+            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-primary text-[20px]">credit_card</span>
+          결제 수단 선택
+        </span>
+<span class="font-label-sm text-[11px] text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">lock</span> 안전 에스크로 적용
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1" id="payment-methods-container">
+<button class="pay-method-btn flex flex-col items-start p-3.5 rounded-xl bg-surface-container-low transition-all text-left relative overflow-hidden bg-primary/10 ring-2 ring-primary" data-method="npay" type="button">
+<div class="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center check-icon">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#03C75A] flex items-center justify-center text-white font-extrabold text-sm mb-2 shadow-sm">
+            N
+          </div>
+<span class="font-label-md text-label-md text-on-surface font-bold">네이버페이</span>
+<span class="font-label-sm text-[10px] text-primary font-semibold mt-0.5">최대 3% 적립 혜택</span>
+</button>
+<button class="pay-method-btn flex flex-col items-start p-3.5 rounded-xl bg-surface-container-low transition-all text-left relative overflow-hidden" data-method="kakaopay" type="button">
+<div class="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary text-on-primary items-center justify-center check-icon hidden">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#FEE500] flex items-center justify-center text-black font-extrabold text-xs mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">카카오페이</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5">머니/카드 간편결제</span>
+</button>
+<button class="pay-method-btn flex flex-col items-start p-3.5 rounded-xl bg-surface-container-low transition-all text-left relative overflow-hidden" data-method="nh-card" type="button">
+<div class="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary text-on-primary items-center justify-center check-icon hidden">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex items-center gap-1 mb-2">
+<div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">agriculture</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[9px] font-extrabold">농가추천</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">농협 / 신용카드</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5">NH농협 무이자할부 지원</span>
+</button>
+<button class="pay-method-btn flex flex-col items-start p-3.5 rounded-xl bg-surface-container-low transition-all text-left relative overflow-hidden" data-method="v-bank" type="button">
+<div class="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary text-on-primary items-center justify-center check-icon hidden">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-tertiary flex items-center justify-center text-on-tertiary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">농협 가상계좌</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant mt-0.5">세금계산서/현금영수증</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-2.5">
+<div class="pt-0.5">
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" id="tax-invoice-check" type="checkbox"/>
+</div>
+<div class="flex flex-col flex-1">
+<label class="font-label-md text-label-md text-on-surface font-bold cursor-pointer" for="tax-invoice-check">
+            농업경영체 / 면세·영세 세금계산서 신청
+          </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            농업용 비료 및 친환경 농자재 영세율 증빙 발행
+          </p>
+</div>
+</div>
+<div class="mt-1 flex flex-col gap-2 p-3 rounded-lg bg-surface-container-low" id="tax-input-container">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="biz-id-input">
+            농업경영체 등록번호 또는 사업자번호
+          </label>
+<input class="w-full h-11 bg-surface-container-lowest rounded-lg px-3 font-label-md text-label-md text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="biz-id-input" placeholder="- 없이 숫자 입력" type="text" value="AGRI-2024-998124"/>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>국세청 홈택스 및 농업경영체 연계 즉시 자동 발급</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<h3 class="font-label-md text-label-md text-on-surface font-bold">최종 결제 금액</h3>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">총 상품금액</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">43,000원</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">배송비</span>
+<span class="font-label-md text-label-md text-primary font-bold">0원 (전국 무료배송)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">신규 농가 쿠폰 할인</span>
+<span class="font-label-md text-label-md text-error font-semibold">-3,000원</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">적립금 사용</span>
+<span class="font-label-md text-label-md text-error font-semibold" id="point-summary-text">-2,000원</span>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-high my-1"></div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">최종 결제금액</span>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary font-extrabold tracking-tight" id="final-amount">38,000</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">원</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-1 flex items-start gap-2">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        주문 내용을 확인하였으며, 하이존바이오 약관 및 개인정보 제공, 결제 대행 서비스 이용에 모두 동의합니다.
+      </p>
+</div>
+<div class="pt-2 pb-6">
+<button class="w-full h-14 bg-primary hover:bg-secondary text-on-primary rounded-xl font-headline-sm text-headline-sm font-bold shadow-lg shadow-primary/20 active:scale-[0.99] transition-all flex items-center justify-center gap-2" id="cta-checkout-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+<span id="cta-button-text">38,000원 결제하기 (네이버페이)</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const payButtons = document.querySelectorAll('.pay-method-btn');
+    const ctaBtnText = document.getElementById('cta-button-text');
+    const pointInput = document.getElementById('point-input');
+    const pointUseAllBtn = document.getElementById('point-use-all-btn');
+    const pointSummaryText = document.getElementById('point-summary-text');
+    const finalAmountEl = document.getElementById('final-amount');
+    const taxCheckbox = document.getElementById('tax-invoice-check');
+    const taxInputContainer = document.getElementById('tax-input-container');
+
+    const methodLabels = {
+      'npay': '네이버페이',
+      'kakaopay': '카카오페이',
+      'nh-card': '농협/신용카드',
+      'v-bank': '농협 가상계좌'
+    };
+
+    let selectedMethod = 'npay';
+    const baseTotal = 43000;
+    const couponDiscount = 3000;
+    const maxPoints = 2500;
+
+    function updateCalculations() {
+      let pts = parseInt(pointInput.value, 10);
+      if (isNaN(pts) || pts < 0) pts = 0;
+      if (pts > maxPoints) pts = maxPoints;
+      pointInput.value = pts;
+
+      const finalPrice = Math.max(0, baseTotal - couponDiscount - pts);
+      finalAmountEl.textContent = finalPrice.toLocaleString('ko-KR');
+      pointSummaryText.textContent = pts > 0 ? `-${pts.toLocaleString('ko-KR')}원` : '0원';
+      
+      const label = methodLabels[selectedMethod] || '결제 진행';
+      ctaBtnText.textContent = `${finalPrice.toLocaleString('ko-KR')}원 결제하기 (${label})`;
+    }
+
+    payButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        payButtons.forEach(b => {
+          b.classList.remove('ring-2', 'ring-primary', 'bg-primary/10');
+          b.classList.add('bg-surface-container-low');
+          const chk = b.querySelector('.check-icon');
+          if (chk) chk.classList.add('hidden');
+        });
+
+        btn.classList.remove('bg-surface-container-low');
+        btn.classList.add('ring-2', 'ring-primary', 'bg-primary/10');
+        const activeChk = btn.querySelector('.check-icon');
+        if (activeChk) activeChk.classList.remove('hidden');
+
+        selectedMethod = btn.getAttribute('data-method');
+        updateCalculations();
+      });
+    });
+
+    pointUseAllBtn.addEventListener('click', () => {
+      pointInput.value = maxPoints;
+      updateCalculations();
+    });
+
+    pointInput.addEventListener('input', updateCalculations);
+
+    taxCheckbox.addEventListener('change', () => {
+      if (taxCheckbox.checked) {
+        taxInputContainer.classList.remove('hidden');
+      } else {
+        taxInputContainer.classList.add('hidden');
+      }
+    });
+
+    document.getElementById('cta-checkout-btn').addEventListener('click', () => {
+      const amt = finalAmountEl.textContent;
+      const method = methodLabels[selectedMethod];
+      alert(`[하이존바이오 결제 승인 요청]\n결제 수단: ${method}\n최종 금액: ${amt}원\n\n안전하게 암호화 결제창으로 이동합니다.`);
+    });
+
+    updateCalculations();
+  })();
+</script></main>
+    <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(10,26,15,0.06)] border-t border-outline-variant/20">
+      <div class="flex items-center justify-around h-16 px-1 max-w-4xl mx-auto">
+        
+      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="index.html">
+        <span class="material-symbols-outlined text-[22px]">home</span>
+        <span class="font-label-sm text-[11px] leading-tight">홈</span>
+      </a>
+    
+      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="lifestyle.html">
+        <span class="material-symbols-outlined text-[22px]">water_drop</span>
+        <span class="font-label-sm text-[11px] leading-tight">라이프스타일</span>
+      </a>
+    
+      <a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary font-bold" href="products.html">
+        <span class="material-symbols-outlined text-[22px]">potted_plant</span>
+        <span class="font-label-sm text-[11px] leading-tight">제품 쇼핑</span>
+      </a>
+    
+      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="ai-hospital.html">
+        <span class="material-symbols-outlined text-[22px]">vital_signs</span>
+        <span class="font-label-sm text-[11px] leading-tight">AI 식물병원</span>
+      </a>
+    
+      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="mypage.html">
+        <span class="material-symbols-outlined text-[22px]">person_pin</span>
+        <span class="font-label-sm text-[11px] leading-tight">마이페이지</span>
+      </a>
+    
+      </div>
+    </nav>
+    <script src="assets/app.js"></script>
+
+  <script>
+    function completeOrder() {
+      const orderId = 'HZ-' + new Date().toISOString().slice(0,10).replace(/-/g,'') + '-' + Math.floor(1000 + Math.random() * 9000);
+      const modal = document.createElement('div');
+      modal.className = 'fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm';
+      modal.innerHTML = `
+        <div class="bg-surface rounded-2xl w-full max-w-md p-6 shadow-2xl relative border border-primary/20 text-center animate-in fade-in zoom-in-95">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center mb-3">
+            <span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          </div>
+          <h3 class="font-headline-md font-bold text-on-surface mb-1">주문 및 결제가 완료되었습니다!</h3>
+          <p class="font-body-sm text-on-surface-variant mb-4">주문번호: <strong class="text-primary">${orderId}</strong><br/>오늘 오후 3시 친환경 안심 포장으로 당일 출고됩니다.</p>
+          <div class="bg-surface-container-low rounded-xl p-3 mb-4 text-left font-body-sm text-on-surface-variant flex flex-col gap-1">
+            <div class="flex justify-between"><span>받는 분</span><span class="font-bold text-on-surface">김영호 (010-9876-5432)</span></div>
+            <div class="flex justify-between"><span>배송지</span><span class="font-bold text-on-surface text-right">전남 나주시 금천면 영산로 123-4</span></div>
+            <div class="flex justify-between"><span>결제금액</span><span class="font-bold text-primary">43,000원 (무료배송)</span></div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="mypage.html" class="w-full py-3 rounded-xl bg-primary text-on-primary font-bold shadow-md text-center hover:bg-primary-container">주문 및 배송조회 (마이페이지)</a>
+            <a href="index.html" class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-semibold text-center">홈으로 돌아가기</a>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+  </script>
+
+</body></html>
