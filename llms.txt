@@ -1,16 +1,4 @@
-# 하이존바이오 (HIGHZONE BIO) — 대한민국 공식 회사 홈페이지 AI 가이드
-> 슬로건: "농업에 탄소를 입히다 (Carbon Technology for Agriculture)"
-> 국내 공식 홈페이지: https://kr.highzonebio.com
-> 글로벌(해외용) 공식 홈페이지: https://highzonebio.com
-> 하이존바이오 공식 전문 쇼핑몰: https://shop.highzonebio.com
-
-## 기업 소개
-하이존바이오(HIGHZONE BIO)는 탄소 소재 공학(Carbon Material Engineering)과 정밀 이온 제어 기술(Ion Delivery System)을 결합하여 작물의 영양 생체이용률을 85% 이상으로 극대화하고 토양 유기탄소를 축적하는 대한민국 친환경 농업 바이오 기업입니다.
-
-## 6대 특화 포뮬러 주력 제품군
-1. **프로그로우 (PRO GROW / 01단계)**: 초기 영양생장 및 엽채류 균형생육 촉진 (이온화 질소 + 탄소 캐리어)
-2. **아마존 미네랄 (AMAZON MINERAL / 02단계)**: 미량요소 결핍 해소 및 토양 미생물 활력 증진 (휴믹산 탄소 캐리어 + 이온 미네랄)
-3. **프로루트 (PRO ROOT / 03단계)**: 뿌리 발근 및 근권 표면적 확장 (이온화 인산 + 옥신 호환 탄소 매트릭스)
-4. **프로쉴드 (PRO SHIELD / 04단계)**: 고온·가뭄·냉해·병해충 등 환경 스트레스 방어 및 세포벽 강화 (이온 규소 + 칼륨 밸런스)
-5. **프로컬러 (PRO COLOR / 05단계)**: 안토시아닌 발현, 자연 착색, 고당도(Brix) 및 저장성 향상
-6. **제5원소 (The 5th Element / 06단계)**: 전 생육기 토양 염류 집적 해소 및 5대 핵심 원소(N, P, K, Ca, Mg) 이온 항상성 복원
+# 하이존바이오 공식 전문 쇼핑몰 (HIGHZONE BIO Official Shop)
+> URL: https://shop.highzonebio.com
+> 대한민국 공식 회사 홈페이지: https://kr.highzonebio.com
+> 글로벌 영문 홈페이지: https://highzonebio.com
