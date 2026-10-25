@@ -1,408 +1,354 @@
 <!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문·배송 조회 & 처방 보관함 | 하이존바이오 공식 전문 쇼핑몰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; word-break: keep-all; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased selection:bg-emerald-800 selection:text-white">
 
-<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>마이페이지 & 내 작물 관리 — 하이존바이오</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f8;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#62df7d", "secondary": "#116d32", "on-tertiary-container": "#fefcff", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#001946", "on-surface-variant": "#3e4a3d", "secondary-fixed-dim": "#84d991", "primary-container": "#00873a", "inverse-on-surface": "#f2f0f0", "tertiary-fixed-dim": "#b1c5ff", "primary-fixed-dim": "#62df7d", "tertiary-fixed": "#dae2ff", "on-background": "#1b1c1c", "on-secondary-fixed-variant": "#005322", "on-surface": "#1b1c1c", "surface-bright": "#fbf9f8", "on-error": "#ffffff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "tertiary": "#0055c9", "surface-tint": "#006e2d", "surface-container-highest": "#e4e2e2", "on-tertiary-fixed-variant": "#00419e", "surface-container-low": "#f5f3f3", "error": "#ba1a1a", "outline": "#6e7b6c", "on-secondary-container": "#1a7337", "primary-fixed": "#7ffc97", "on-primary-fixed-variant": "#005320", "secondary-fixed": "#9ff6ab", "surface-container-high": "#eae8e7", "on-primary-container": "#f7fff2", "outline-variant": "#bdcaba", "tertiary-container": "#036cfb", "surface-container": "#efeded", "secondary-container": "#9ff6ab", "surface-variant": "#e4e2e2", "surface": "#fbf9f8", "on-error-container": "#93000a", "on-secondary-fixed": "#002109", "primary": "#006b2c", "surface-container-lowest": "#ffffff", "inverse-surface": "#303030", "error-container": "#ffdad6", "on-primary-fixed": "#002109", "background": "#fbf9f8", "surface-dim": "#dbd9d9" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-desktop": "2rem", "gutter-mobile": "1rem", "space-2xs": "0.25rem", "margin-mobile": "1.25rem", "space-3xl": "4rem", "space-2xl": "3rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "display-lg-mobile": ["Montserrat"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Montserrat"], "headline-md": ["Montserrat"], "headline-xl": ["Montserrat"], "label-sm": ["Montserrat"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Montserrat"], "headline-lg": ["Montserrat"], "body-xl": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg": ["Montserrat"], "headline-xl-mobile": ["Montserrat"] }, "fontSize": { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "21px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["18px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "25px", "letterSpacing": "0", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } }</script>  <link rel="stylesheet" href="assets/style.css"/>
-</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary/20">
-    <header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
-      <div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs max-w-4xl mx-auto">
-        <a href="index.html" class="flex items-center gap-space-xs">
-          <img alt="HIGHZONE BIO" class="h-8 w-auto object-contain" src="assets/logo.png" onerror="this.src='stitch_high_definition_design_generator/logo.png/screen.png'"/>
-          <div class="flex flex-col justify-center leading-tight">
-            <span class="font-label-md text-label-md text-primary tracking-tight font-bold">하이존바이오</span>
-            <span class="font-label-sm text-[10px] text-on-surface-variant font-medium tracking-wider -mt-0.5">HIGHZONE BIO</span>
-          </div>
-        </a>
-        <div class="flex items-center gap-1">
-          <button type="button" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" data-path="search" title="검색">
-            <span class="material-symbols-outlined text-[22px]">search</span>
-          </button>
-          <a class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors relative" href="mypage.html#notifications" title="알림">
-            <span class="material-symbols-outlined text-[22px]">notifications</span>
-            <span class="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-error"></span>
-          </a>
-          <button type="button" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors relative" data-path="cart" title="장바구니">
-            <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
-            <span class="cart-count-badge absolute top-1.5 right-1.5 min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">2</span>
-          </button>
-          <a href="mypage.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 text-on-primary hover:opacity-90 transition-opacity" title="마이페이지">
-            <span class="material-symbols-outlined text-[18px]">person</span>
-          </a>
+<div class="max-w-[560px] mx-auto bg-white min-h-screen shadow-2xl relative pb-28 border-x border-slate-200/80">
+
+    <!-- Top Cross-Site Bar -->
+    <div class="bg-emerald-950 text-emerald-100 px-4 py-2 text-[11px] flex items-center justify-between border-b border-emerald-900">
+        <span class="font-semibold">📋 내 주문·배송 조회 & 농장 맞춤 처방 보관함</span>
+        <div class="flex items-center gap-2">
+            <a href="http://kr.highzonebio.com" target="_blank" class="px-2 py-0.5 rounded bg-emerald-900 hover:bg-emerald-800 text-amber-300 font-bold">🏢 회사공식홈피</a>
+            <a href="http://highzonebio.com" target="_blank" class="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-white font-bold">🌐 EN</a>
         </div>
-      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+            <a href="index.html" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            </a>
+            <div>
+                <h1 class="text-base font-black text-slate-900">마이페이지 · 처방 보관함</h1>
+                <p class="text-[11px] text-emerald-700 font-bold">주문 내역 · 배송지 관리 · 계절별 맞춤 처방전</p>
+            </div>
+        </div>
+        <button type="button" data-action="open-cart" class="relative w-10 h-10 rounded-full bg-emerald-950 text-white flex items-center justify-center shadow-md">
+            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            <span class="cart-badge absolute -top-1 -right-1 bg-amber-400 text-slate-950 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
     </header>
-  <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- 1. Agricultural Profile Header Section -->
-<section class="relative px-margin-mobile pt-space-xs pb-space-lg">
-<!-- Ambient Bio-Atmosphere Subtle Glow -->
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-40 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
-<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md relative overflow-hidden">
-<!-- Top Badges and Farm Profile Info -->
-<div class="flex items-start justify-between gap-space-sm">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="relative w-14 h-14 rounded-full bg-surface-container-high p-0.5 shrink-0 overflow-hidden flex items-center justify-center">
-<img class="w-full h-full object-cover rounded-full" alt="김영호 농업인 프로필" src="assets/panel_balcony.png"/>
-<span class="absolute bottom-0 right-0 w-4 h-4 bg-primary rounded-full border-2 border-surface-container-lowest flex items-center justify-center shadow-xs">
-<span class="material-symbols-outlined text-[10px] text-on-primary font-bold">verified</span>
-</span>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5 flex-wrap">
-<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">김영호 농업인</span>
-<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-                골드 파트너
-              </span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">나주배 행복농원 대표</span>
-</div>
-</div>
-<button aria-label="프로필 및 농가 정보 설정" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors">
-<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
-</button>
-</div>
-<!-- Agricultural Verification Seal & Registration Badge -->
-<div class="bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between gap-2">
-<div class="flex items-center gap-1.5 min-w-0">
-<span class="material-symbols-outlined text-primary text-[18px] shrink-0" style="font-variation-settings: 'FILL' 1;">eco</span>
-<div class="flex items-center gap-1 text-on-surface min-w-0">
-<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider shrink-0">국립농산물품질관리원</span>
-<span class="font-label-sm text-[11px] font-semibold text-secondary truncate">AGRI-2024-998124 인증</span>
-</div>
-</div>
-<span class="inline-flex items-center gap-1 font-label-sm text-[10px] text-on-surface-variant bg-surface-container-lowest px-2 py-0.5 rounded shadow-2xs shrink-0">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          인증 활성
-        </span>
-</div>
-<!-- Farmer Mileage & Voucher Stat Bar -->
-<div class="grid grid-cols-2 gap-space-xs pt-1">
-<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-sm text-label-sm text-on-surface-variant">농가 마일리지</span>
-<span class="material-symbols-outlined text-[16px] text-primary">toll</span>
-</div>
-<div class="flex items-baseline gap-1 mt-1">
-<span class="font-headline-md text-headline-md text-on-surface font-extrabold font-headline-md">2,500</span>
-<span class="font-label-sm text-label-sm text-primary font-semibold">P</span>
-</div>
-</div>
-<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between">
-<div class="flex items-center justify-between text-on-surface-variant">
-<span class="font-label-sm text-label-sm text-on-surface-variant">보유 농가쿠폰</span>
-<span class="material-symbols-outlined text-[16px] text-tertiary">confirmation_number</span>
-</div>
-<div class="flex items-baseline gap-1 mt-1">
-<span class="font-headline-md text-headline-md text-on-surface font-extrabold font-headline-md">2</span>
-<span class="font-label-sm text-label-sm text-tertiary font-semibold">장</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 2. Order & Logistics Status Hub -->
-<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">주문 및 친환경 배송 현황</h2>
-</div>
-<a class="font-label-sm text-label-sm text-outline hover:text-primary flex items-center transition-colors" href="#">
-        전체보기
-        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</a>
-</div>
-<!-- 4-Step Order Status Pipeline -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<div class="grid grid-cols-4 relative">
-<!-- Connecting Progress Bar (Level 1) -->
-<div class="absolute top-5 left-1/8 right-1/8 h-0.5 bg-surface-container-highest -z-0">
-<div class="h-full bg-primary transition-all duration-500" style="width: 66%;"></div>
-</div>
-<!-- Step 1: 결제완료 -->
-<div class="flex flex-col items-center gap-1 z-10">
-<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md shadow-sm">
-            1
-          </div>
-<span class="font-label-sm text-[11px] text-on-surface font-semibold text-center">결제완료</span>
-</div>
-<!-- Step 2: 상품준비중 -->
-<div class="flex flex-col items-center gap-1 z-10">
-<div class="w-10 h-10 rounded-full bg-surface-container-high text-outline flex items-center justify-center font-label-md text-label-md">
-            0
-          </div>
-<span class="font-label-sm text-[11px] text-outline font-normal text-center">배합/준비</span>
-</div>
-<!-- Step 3: 배송중 -->
-<div class="flex flex-col items-center gap-1 z-10">
-<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md text-label-md shadow-sm">
-            1
-          </div>
-<span class="font-label-sm text-[11px] text-primary font-bold text-center">배송중</span>
-</div>
-<!-- Step 4: 배송완료 -->
-<div class="flex flex-col items-center gap-1 z-10">
-<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md">
-            12
-          </div>
-<span class="font-label-sm text-[11px] text-on-surface-variant font-normal text-center">배송완료</span>
-</div>
-</div>
-<!-- Recent Active Order Card -->
-<div class="mt-space-md pt-space-md bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
-<div class="flex items-center justify-between text-on-surface-variant text-body-sm font-body-sm">
-<span class="font-label-sm text-label-sm text-outline">주문번호 20250228-HJ9831</span>
-<span class="inline-flex items-center gap-1 text-primary font-semibold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-            당일 안전출고 준비완료
-          </span>
-</div>
-<div class="flex gap-space-sm items-center py-1">
-<div class="w-16 h-16 rounded bg-surface-container-lowest p-1 shrink-0 flex items-center justify-center">
-<img class="w-full h-full object-contain" data-alt="A clean, professional biotechnology liquid fertilizer bottle packaging labeled Bio-Redzol with green and red bio-ion molecules graphic, standing on pure laboratory white background with soft diffused botanical reflection" src="assets/downloaded_44.jpg"/>
-</div>
-<div class="flex flex-col min-w-0 flex-1">
-<span class="font-headline-sm text-[15px] font-bold text-on-surface leading-tight truncate">바이오레드졸 500ml + 에이스인카 특화세트</span>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="font-headline-sm text-headline-sm text-primary font-bold font-headline-md">38,000원</span>
-<span class="font-body-sm text-body-sm text-outline">(1세트 / 영세율 적용)</span>
-</div>
-</div>
-</div>
-<div class="flex gap-2 pt-1">
-<button class="flex-1 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
-<span class="material-symbols-outlined text-[16px]">receipt_long</span>
-            주문상세
-          </button>
-<button class="flex-1 h-10 rounded bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors shadow-xs">
-<span class="material-symbols-outlined text-[16px]">local_shipping</span>
-            실시간 배송조회
-          </button>
-</div>
-</div>
-</div>
-</section>
-<!-- 3. Registered Crops & AI Plant Clinic Archive (Core Ag-Tech Feature) -->
-<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">내 작물 &amp; AI 처방전 보관함</h2>
-</div>
-<a class="font-label-sm text-label-sm text-secondary font-bold hover:underline flex items-center" href="#">
-        처방내역 전체
-        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</a>
-</div>
-<!-- Registered Crop Parcels Overview -->
-<div class="grid grid-cols-2 gap-space-xs">
-<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center gap-space-xs">
-<div class="w-10 h-10 rounded-lg bg-secondary-container/50 flex items-center justify-center text-secondary shrink-0">
-<span class="material-symbols-outlined text-[24px]">nature</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-[11px] text-outline">제1농장 과수원</span>
-<span class="font-headline-sm text-[14px] font-bold text-on-surface truncate">신고배 (3,000평)</span>
-<span class="font-body-sm text-[11px] text-secondary font-medium">영양생장기 관리중</span>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center gap-space-xs">
-<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined text-[24px]">grid_view</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-[11px] text-outline">제2연동 스마트팜</span>
-<span class="font-headline-sm text-[14px] font-bold text-on-surface truncate">완숙토마토 (1,200평)</span>
-<span class="font-body-sm text-[11px] text-primary font-medium">착과비대기 관리중</span>
-</div>
-</div>
-</div>
-<!-- Recent AI Clinic Diagnosis & Prescription Card -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
-<div class="flex items-center justify-between pb-1">
-<div class="flex items-center gap-1.5">
-<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] font-bold">AI 정밀진단</span>
-<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">2025.02.25 진단</span>
-</div>
-<span class="font-label-sm text-[11px] text-error font-semibold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px]">warning</span>
-          조기 대처 권장
-        </span>
-</div>
-<div class="flex gap-space-sm items-start">
-<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-container-high">
-<img class="w-full h-full object-cover" data-alt="Macro close-up photograph of a young greenhouse tomato leaf exhibiting early symptoms of calcium deficiency tipburn with light browning on the leaf margin, scientific agriculture inspection photo" src="assets/downloaded_45.jpg"/>
-</div>
-<div class="flex flex-col min-w-0 flex-1">
-<h3 class="font-headline-sm text-[15px] font-bold text-on-surface leading-snug">토마토 잎끝마름(Tipburn) 및 칼슘 결핍</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
-            생육기 급격한 증산 작용으로 인한 이온흡수 불균형. '에이스인카 1,000배 희석 엽면시비' 권장.
-          </p>
-</div>
-</div>
-<!-- Prescribed Product Recommendation Bar -->
-<div class="mt-1 p-space-xs rounded bg-surface-container-low flex items-center justify-between">
-<div class="flex items-center gap-2 min-w-0">
-<span class="material-symbols-outlined text-primary text-[18px]">science</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">맞춤 처방제: 에이스인카 (활성칼슘+붕소)</span>
-</div>
-<button class="px-3 py-1 rounded bg-secondary text-on-secondary font-label-sm text-[11px] font-bold shrink-0 hover:bg-primary transition-colors flex items-center gap-0.5">
-          처방전 재주문
-          <span class="material-symbols-outlined text-[12px]">shopping_bag</span>
-</button>
-</div>
-</div>
-</section>
-<!-- 4. Regular Eco-Shipment & Seasonal Farming Calendar -->
-<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-primary text-[20px]">event_repeat</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">영농 캘린더 &amp; 정기 배송</h2>
-</div>
-<span class="font-label-sm text-label-sm text-outline">배송 주기: 30일</span>
-</div>
-<!-- Calendar Sync Alert Card -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
-<div class="flex items-start gap-space-sm">
-<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex flex-col items-center justify-center shrink-0">
-<span class="font-label-sm text-[10px] uppercase font-bold leading-none">3월</span>
-<span class="font-headline-md text-headline-md font-extrabold leading-none mt-0.5">05</span>
-</div>
-<div class="flex flex-col min-w-0 flex-1">
-<div class="flex items-center gap-1.5 flex-wrap">
-<span class="font-headline-sm text-[15px] font-bold text-on-surface">3월 개화기 꽃샘추위 대비 방제</span>
-<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">정기구독 5% 할인</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-            배나무 조기 발아 및 동해 예방용 바이오레드졸(1L × 4병) 정기 배송이 나주 저온창고로 출하 예정입니다.
-          </p>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs bg-surface-container-low rounded-lg px-space-sm py-2">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-outline text-[16px]">location_on</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant truncate">기본 배송지: 나주배 행복농원 제1저온창고</span>
-</div>
-<button class="font-label-sm text-label-sm text-secondary font-bold hover:underline shrink-0">일정 변경</button>
-</div>
-</div>
-</section>
-<!-- 5. Agricultural Verification & Farm Support Grid Menu -->
-<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-secondary text-[20px]">folder_special</span>
-      농가 전용 행정 &amp; 지원 포털
-    </h2>
-<div class="grid grid-cols-2 gap-space-xs">
-<!-- 1. 면세/영세율 세금계산서 발급 -->
-<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors group" href="#">
-<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-[22px]">receipt</span>
-</div>
-<div class="mt-space-md">
-<h3 class="font-headline-sm text-[14px] font-bold text-on-surface leading-snug">영세율 세금계산서</h3>
-<p class="font-body-sm text-[11px] text-outline mt-0.5">면세영수증 및 홈택스 연동</p>
-</div>
-</a>
-<!-- 2. 농진청 공인 시험성적서 -->
-<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors group" href="#">
-<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
-<span class="material-symbols-outlined text-[22px]">description</span>
-</div>
-<div class="mt-space-md">
-<h3 class="font-headline-sm text-[14px] font-bold text-on-surface leading-snug">공인 시험성적서</h3>
-<p class="font-body-sm text-[11px] text-outline mt-0.5">비료등록증 &amp; 유기농업자재</p>
-</div>
-</a>
-<!-- 3. 전담 연구원 1:1 직통 상담 내역 -->
-<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors group" href="#">
-<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
-<span class="material-symbols-outlined text-[22px]">support_agent</span>
-</div>
-<div class="mt-space-md">
-<h3 class="font-headline-sm text-[14px] font-bold text-on-surface leading-snug">전담 연구원 1:1 상담</h3>
-<p class="font-body-sm text-[11px] text-outline mt-0.5">생명공학 박사 맞춤 처방</p>
-</div>
-</a>
-<!-- 4. 농가 주소록 관리 (저온창고/비닐하우스) -->
-<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors group" href="#">
-<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-[22px]">warehouse</span>
-</div>
-<div class="mt-space-md">
-<h3 class="font-headline-sm text-[14px] font-bold text-on-surface leading-snug">농장 거점 배송지</h3>
-<p class="font-body-sm text-[11px] text-outline mt-0.5">저온창고/시설하우스 배송설정</p>
-</div>
-</a>
-</div>
-</section>
-<!-- 6. Customer Care & Bio-Tech Research Certification Footer -->
-<section class="px-margin-mobile pb-space-xl flex flex-col gap-space-md">
-<!-- Bio-Tech Lab Research Quality Guarantee Seal -->
-<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs shrink-0">
-<span class="material-symbols-outlined text-[26px]">verified_user</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-[11px] text-secondary font-bold">전북대학교 농생명 벤처 연구센터 기술지원</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
-          하이존바이오의 모든 제제는 공인 연구진의 안전성 검증 및 작물 생육 시험을 거칩니다.
-        </p>
-</div>
-</div>
-<!-- Direct Hotline & Operations Banner -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-[11px] text-outline">농가 전용 직통 상담 콜센터</span>
-<a class="font-headline-md text-headline-md text-primary font-bold font-headline-md leading-none mt-0.5" href="tel:1588-0000">1588-0000</a>
-</div>
-</div>
-<span class="px-2 py-1 rounded bg-surface-container font-label-sm text-[11px] text-on-surface-variant font-medium">평일 09:00 - 18:00</span>
-</div>
-<div class="flex items-center justify-between pt-space-xs text-outline font-label-sm text-[11px]">
-<span>점심시간: 12:00 - 13:00 (공휴일 휴무)</span>
-<div class="flex items-center gap-3">
-<a class="hover:text-primary transition-colors" href="#">이용약관</a>
-<a class="hover:text-primary transition-colors font-bold" href="#">개인정보처리방침</a>
-</div>
-</div>
-</div>
-</section>
-</div></main>
-    <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(10,26,15,0.06)] border-t border-outline-variant/20">
-      <div class="flex items-center justify-around h-16 px-1 max-w-4xl mx-auto">
-        
-      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="index.html">
-        <span class="material-symbols-outlined text-[22px]">home</span>
-        <span class="font-label-sm text-[11px] leading-tight">홈</span>
-      </a>
-    
-      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="lifestyle.html">
-        <span class="material-symbols-outlined text-[22px]">water_drop</span>
-        <span class="font-label-sm text-[11px] leading-tight">라이프스타일</span>
-      </a>
-    
-      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="products.html">
-        <span class="material-symbols-outlined text-[22px]">potted_plant</span>
-        <span class="font-label-sm text-[11px] leading-tight">제품 쇼핑</span>
-      </a>
-    
-      <a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-on-surface-variant hover:text-primary" href="ai-hospital.html">
-        <span class="material-symbols-outlined text-[22px]">vital_signs</span>
-        <span class="font-label-sm text-[11px] leading-tight">AI 식물병원</span>
-      </a>
-    
-      <a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary font-bold" href="mypage.html">
-        <span class="material-symbols-outlined text-[22px]">person_pin</span>
-        <span class="font-label-sm text-[11px] leading-tight">마이페이지</span>
-      </a>
-    
-      </div>
+
+    <!-- 1. Customer / Farm Profile Card -->
+    <section class="p-5 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 text-white">
+        <div class="flex items-start justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-2xl shrink-0">
+                    🌾
+                </div>
+                <div>
+                    <span class="inline-block px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black mb-1">하이존바이오 직거래 회원</span>
+                    <h2 id="profile-display-name" class="text-lg font-black text-white">내 농장 · 배송지 프로필</h2>
+                    <p id="profile-display-sub" class="text-xs text-emerald-200">배송지와 주력 재배 작물을 등록해 두시면 주문이 빨라집니다.</p>
+                </div>
+            </div>
+            <button type="button" id="toggle-profile-edit-btn" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white border border-white/15 shrink-0">
+                ⚙️ 정보수정
+            </button>
+        </div>
+
+        <!-- Collapsible Profile Edit Form -->
+        <form id="profile-edit-form" class="hidden bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 space-y-2.5 mb-3 text-xs">
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="block text-emerald-200 font-bold mb-1">성함 / 농장명</label>
+                    <input type="text" id="prof-name" placeholder="예: 홍길동 (한울농원)" class="w-full px-3 py-2 rounded-xl bg-white text-slate-900 font-bold focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-emerald-200 font-bold mb-1">연락처</label>
+                    <input type="tel" id="prof-phone" placeholder="010-0000-0000" class="w-full px-3 py-2 rounded-xl bg-white text-slate-900 font-bold focus:outline-none">
+                </div>
+            </div>
+            <div>
+                <label class="block text-emerald-200 font-bold mb-1">주력 재배 작물 및 규모</label>
+                <input type="text" id="prof-crop" placeholder="예: 노지고추 1,500평 / 베란다 상추·토마토" class="w-full px-3 py-2 rounded-xl bg-white text-slate-900 font-bold focus:outline-none">
+            </div>
+            <div>
+                <label class="block text-emerald-200 font-bold mb-1">기본 배송지 주소</label>
+                <input type="text" id="prof-addr1" placeholder="도로명 또는 지번 주소" class="w-full px-3 py-2 rounded-xl bg-white text-slate-900 font-bold focus:outline-none">
+            </div>
+            <div class="flex justify-end gap-2 pt-1">
+                <button type="submit" class="px-4 py-2 rounded-xl bg-amber-400 text-slate-950 font-black">저장하기</button>
+            </div>
+        </form>
+
+        <!-- Quick Stats Strip -->
+        <div class="grid grid-cols-3 gap-2 pt-2">
+            <div class="bg-white/10 rounded-xl p-2.5 text-center border border-white/10">
+                <span class="block text-[10px] text-emerald-200">누적 주문건수</span>
+                <strong id="stat-order-count" class="text-base font-black text-white">0건</strong>
+            </div>
+            <div class="bg-white/10 rounded-xl p-2.5 text-center border border-white/10">
+                <span class="block text-[10px] text-emerald-200">장바구니 품목</span>
+                <strong id="stat-cart-count" class="text-base font-black text-amber-400">0개</strong>
+            </div>
+            <div class="bg-white/10 rounded-xl p-2.5 text-center border border-white/10">
+                <span class="block text-[10px] text-emerald-200">보관된 처방전</span>
+                <strong id="stat-rx-count" class="text-base font-black text-emerald-300">3건</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Recent Orders History Section -->
+    <section class="p-5 border-b-8 border-slate-100">
+        <div class="flex items-center justify-between mb-3">
+            <div>
+                <span class="text-[11px] font-extrabold text-emerald-700 uppercase tracking-wider">ORDER HISTORY</span>
+                <h3 class="text-base font-black text-slate-900">📦 내 주문 및 출고 조회</h3>
+            </div>
+            <a href="order.html" class="text-xs font-bold text-emerald-700 hover:underline">주문서 바로가기 →</a>
+        </div>
+
+        <div id="mypage-orders-list" class="space-y-3">
+            <!-- Dynamically rendered -->
+        </div>
+    </section>
+
+    <!-- 3. Saved AI Prescriptions & Standard Seasonal Protocols -->
+    <section class="p-5 border-b-8 border-slate-100" id="notifications">
+        <div class="flex items-center justify-between mb-3">
+            <div>
+                <span class="text-[11px] font-extrabold text-emerald-700 uppercase tracking-wider">PRESCRIPTION VAULT</span>
+                <h3 class="text-base font-black text-slate-900">🩺 AI 진단 & 시기별 표준 처방 보관함</h3>
+            </div>
+            <a href="ai-hospital.html" class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-bold hover:bg-emerald-100">+ 새 AI 진단받기</a>
+        </div>
+
+        <!-- User-saved AI prescriptions -->
+        <div id="saved-rx-list" class="space-y-3 mb-4"></div>
+
+        <!-- 3 R&D Seasonal Standard Prescriptions -->
+        <div class="space-y-3">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-2 py-0.5 rounded bg-emerald-800 text-white text-[10px] font-black">R&D 표준 처방 #01 · 정식/초기</span>
+                    <span class="text-[11px] font-bold text-emerald-700">물 500L당 각 1병(1,000배)</span>
+                </div>
+                <h4 class="text-sm font-black text-slate-900">연작장해 극복 & 뿌리 세근 폭발 패키지</h4>
+                <p class="text-xs text-slate-600 mt-1 mb-3 leading-relaxed">
+                    정식 직후 몸살을 막고 하얀 잔뿌리(세근)를 200% 확장하는 필수 기초 처방: <strong>[바이오레드졸 500ml] + [쑥쑥자라미2 500ml]</strong>
+                </p>
+                <div class="flex gap-2">
+                    <a href="product-detail.html?id=redsol-500" class="flex-1 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 font-bold text-xs text-center hover:bg-slate-100">상세 희석표</a>
+                    <button type="button" onclick="HighzoneCart.addItem('redsol-500', 1, false); HighzoneCart.addItem('grow-500', 1, true);" class="flex-1 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-xs text-center">⚡ 2종 한번에 담기</button>
+                </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-2 py-0.5 rounded bg-amber-500 text-slate-950 text-[10px] font-black">R&D 표준 처방 #02 · 장마/태풍기</span>
+                    <span class="text-[11px] font-bold text-emerald-700">강우 전·후 방어</span>
+                </div>
+                <h4 class="text-sm font-black text-slate-900">태풍 도복(쓰러짐) 방지 & 무농약 탄저·해충 이원 방어</h4>
+                <p class="text-xs text-slate-600 mt-1 mb-3 leading-relaxed">
+                    줄기 세포벽을 강철처럼 단단하게 잡고 곰팡이·해충을 동시에 제어하는 방어 처방: <strong>[제5원소 도복왕 100ml] + [순수 은수용액 Ag] + [굿바이충]</strong>
+                </p>
+                <div class="flex gap-2">
+                    <a href="product-detail.html?id=dobok-100" class="flex-1 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 font-bold text-xs text-center hover:bg-slate-100">상세 희석표</a>
+                    <button type="button" onclick="HighzoneCart.addItem('dobok-100', 1, false); HighzoneCart.addItem('silver-500', 1, false); HighzoneCart.addItem('goodbye-500', 1, true);" class="flex-1 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-xs text-center">🛡️ 3종 방어세트 담기</button>
+                </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-2 py-0.5 rounded bg-purple-700 text-white text-[10px] font-black">R&D 표준 처방 #03 · 비대/수확기</span>
+                    <span class="text-[11px] font-bold text-emerald-700">수확 2~4주 전 집중</span>
+                </div>
+                <h4 class="text-sm font-black text-slate-900">과실 비대 · 경도 강화 · 당도(Brix) +2~3도 상승 처방</h4>
+                <p class="text-xs text-slate-600 mt-1 mb-3 leading-relaxed">
+                    열과·무름을 막고 공판장 최고가 특품 비율을 높이는 후기 마무리 처방: <strong>[에이스 인카 500ml] + [셀레늄 수용액 Se 500ml]</strong>
+                </p>
+                <div class="flex gap-2">
+                    <a href="product-detail.html?id=inca-500" class="flex-1 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 font-bold text-xs text-center hover:bg-slate-100">상세 희석표</a>
+                    <button type="button" onclick="HighzoneCart.addItem('inca-500', 1, false); HighzoneCart.addItem('selenium-500', 1, true);" class="flex-1 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-xs text-center">💎 비대·당도 2종 담기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. B2B & Administrative Support Center -->
+    <section class="p-5 bg-slate-50">
+        <span class="text-[11px] font-extrabold text-emerald-700 uppercase tracking-wider">FARMER SUPPORT PORTAL</span>
+        <h3 class="text-base font-black text-slate-900 mb-3">행정 서류 · 시험성적서 · 연구소 직통 지원</h3>
+
+        <div class="grid grid-cols-2 gap-2.5">
+            <button type="button" data-action="open-consult" data-crop="영세율 세금계산서 및 보조사업 서류 신청" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-600 text-left transition-all shadow-sm">
+                <span class="text-xl">🧾</span>
+                <h4 class="text-xs font-black text-slate-900 mt-1.5">영세율 세금계산서 발행</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">농업경영체 · 지자체 보조사업 정산 서류 즉시 발급</p>
+            </button>
+
+            <a href="http://kr.highzonebio.com/#certs" target="_blank" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-600 text-left transition-all shadow-sm block">
+                <span class="text-xl">🏅</span>
+                <h4 class="text-xs font-black text-slate-900 mt-1.5">특허 · 공인 시험성적서</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">특허 제10-2493517호 및 KTR 99.9% 성적서 열람</p>
+            </a>
+
+            <button type="button" data-action="open-consult" data-crop="작목반/대농가 박스 및 20L 말통 대량납품 견적" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-600 text-left transition-all shadow-sm">
+                <span class="text-xl">🚜</span>
+                <h4 class="text-xs font-black text-slate-900 mt-1.5">작목반 · 말통 대량견적</h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">10병 이상 박스 단가 및 20L 대용량 계통납품</p>
+            </button>
+
+            <a href="tel:063-855-5001" class="p-4 rounded-2xl bg-emerald-950 text-white text-left transition-all shadow-sm block">
+                <span class="text-xl">📞</span>
+                <h4 class="text-xs font-black text-amber-300 mt-1.5">연구소 직통 전화상담</h4>
+                <p class="text-[11px] text-emerald-100 mt-0.5">063-855-5001 (전주대 창업보육센터 R&D 연구소)</p>
+            </a>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-200 text-center text-[11px] text-slate-500 space-y-1">
+            <p class="font-bold text-slate-700">주식회사 하이존바이오 · 전주대학교 벤처창업관 산학협력 R&D 연구소</p>
+            <p>대표전화: 063-855-5001 | 평일 09:00 ~ 18:00 (토·일·공휴일 휴무)</p>
+        </div>
+    </section>
+
+    <!-- Bottom Tab Navigation -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[560px] bg-white/95 backdrop-blur-md border-t border-slate-200 px-2 py-2 flex justify-around items-center z-40">
+        <a href="index.html" class="flex flex-col items-center py-1 px-3 text-slate-500 hover:text-emerald-700">
+            <i data-lucide="home" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold mt-0.5">홈</span>
+        </a>
+        <a href="products.html" class="flex flex-col items-center py-1 px-3 text-slate-500 hover:text-emerald-700">
+            <i data-lucide="grid" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold mt-0.5">전제품(14종)</span>
+        </a>
+        <a href="ai-hospital.html" class="flex flex-col items-center py-1 px-3 text-slate-500 hover:text-emerald-700">
+            <i data-lucide="stethoscope" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold mt-0.5">AI식물병원</span>
+        </a>
+        <a href="stories.html" class="flex flex-col items-center py-1 px-3 text-slate-500 hover:text-emerald-700">
+            <i data-lucide="award" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold mt-0.5">실증사례</span>
+        </a>
+        <a href="mypage.html" class="flex flex-col items-center py-1 px-3 text-emerald-700">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+            <span class="text-[10px] font-black mt-0.5">주문·처방함</span>
+        </a>
     </nav>
-    <script src="assets/app.js"></script>
-</body></html>
+
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+
+    const profForm = document.getElementById('profile-edit-form');
+    const toggleProfBtn = document.getElementById('toggle-profile-edit-btn');
+
+    function renderProfile() {
+        try {
+            const p = JSON.parse(localStorage.getItem('highzone_customer_profile_v3') || 'null');
+            if (p && p.name) {
+                document.getElementById('profile-display-name').textContent = `${p.name} 님`;
+                document.getElementById('profile-display-sub').textContent = `${p.crop ? '[' + p.crop + '] · ' : ''}${p.addr1 || p.phone || '등록된 기본 배송지 사용 중'}`;
+                document.getElementById('prof-name').value = p.name || '';
+                document.getElementById('prof-phone').value = p.phone || '';
+                document.getElementById('prof-crop').value = p.crop || '';
+                document.getElementById('prof-addr1').value = p.addr1 || '';
+            }
+        } catch (e) {}
+    }
+
+    toggleProfBtn.addEventListener('click', () => {
+        profForm.classList.toggle('hidden');
+    });
+
+    profForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = {
+            name: document.getElementById('prof-name').value.trim(),
+            phone: document.getElementById('prof-phone').value.trim(),
+            crop: document.getElementById('prof-crop').value.trim(),
+            addr1: document.getElementById('prof-addr1').value.trim()
+        };
+        localStorage.setItem('highzone_customer_profile_v3', JSON.stringify(data));
+        profForm.classList.add('hidden');
+        renderProfile();
+        HighzoneCart.showToast('내 농장·배송지 프로필이 저장되었습니다.');
+    });
+
+    function renderOrdersAndStats() {
+        const orders = HighzoneCart.getOrders();
+        const savedRx = HighzoneCart.getPrescriptions();
+        const cartCount = HighzoneCart.getTotalCount();
+
+        document.getElementById('stat-order-count').textContent = `${orders.length}건`;
+        document.getElementById('stat-cart-count').textContent = `${cartCount}개`;
+        document.getElementById('stat-rx-count').textContent = `${3 + savedRx.length}건`;
+
+        const ordersEl = document.getElementById('mypage-orders-list');
+        if (orders.length === 0) {
+            ordersEl.innerHTML = `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <p class="text-xs font-bold text-slate-700 mb-1">아직 접수된 주문 내역이 없습니다.</p>
+                    <p class="text-[11px] text-slate-500 mb-3">장바구니에 담은 제품을 주문하시면 이곳에 실시간 주문·배송 상태가 표시됩니다.</p>
+                    <div class="flex justify-center gap-2">
+                        <a href="products.html" class="px-3.5 py-2 rounded-xl bg-emerald-700 text-white text-xs font-bold">14종 제품 보러가기</a>
+                        <button type="button" onclick="HighzoneCart.openDrawer()" class="px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 text-xs font-bold">장바구니 열기 (${cartCount})</button>
+                    </div>
+                </div>
+            `;
+        } else {
+            ordersEl.innerHTML = orders.map(o => `
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-2">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                        <div>
+                            <span class="font-mono text-xs font-black text-emerald-800">#${o.orderNo}</span>
+                            <span class="text-[11px] text-slate-400 ml-1.5">${o.date}</span>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-black">${o.status}</span>
+                    </div>
+                    <div class="text-xs space-y-1">
+                        <p class="font-black text-slate-900">${o.items.map(i => `${i.name} (${i.qty}개)`).join(', ')}</p>
+                        <p class="text-slate-500 text-[11px]">배송지: ${o.buyer.name} · ${o.buyer.address}</p>
+                        <div class="flex items-center justify-between pt-1">
+                            <span class="text-[11px] font-semibold text-slate-500">${o.payMethod}</span>
+                            <strong class="text-sm font-black text-emerald-700">총 ${o.total.toLocaleString()}원</strong>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        const rxEl = document.getElementById('saved-rx-list');
+        if (savedRx.length === 0) {
+            rxEl.innerHTML = '';
+        } else {
+            rxEl.innerHTML = savedRx.map(rx => `
+                <div class="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-300">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="px-2 py-0.5 rounded bg-emerald-900 text-amber-300 text-[10px] font-black">내 저장 AI 처방 · ${rx.code}</span>
+                        <span class="text-[10px] text-slate-500 font-bold">${rx.date || '최근 진단'}</span>
+                    </div>
+                    <h4 class="text-sm font-black text-slate-900">${rx.title}</h4>
+                    <p class="text-xs text-slate-600 mt-1 mb-2.5">${rx.summary}</p>
+                    <div class="flex gap-2">
+                        <a href="product-detail.html?id=${rx.primaryId}" class="flex-1 py-2 rounded-xl bg-white border border-emerald-200 text-emerald-800 font-bold text-xs text-center">상세 처방전</a>
+                        <button type="button" onclick="HighzoneCart.addItem('${rx.primaryId}', 1)" class="flex-1 py-2 rounded-xl bg-emerald-700 text-white font-black text-xs text-center">🛒 처방제품 담기</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
+    window.addEventListener('highzone:cart-updated', renderOrdersAndStats);
+    renderProfile();
+    renderOrdersAndStats();
+});
+</script>
+</body>
+</html>
