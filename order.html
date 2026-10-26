@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주문·결제 및 처방 접수 | 하이존바이오 공식 전문 쇼핑몰</title>
+    <meta name="description" content="하이존바이오 14종 바이오 처방 제품 및 시너지 세트 공식 주문서. 평일 오후 3시 이전 당일출고, 5만원 이상 무료배송, 농업경영체 영세율 세금계산서 즉시 발행 (063-855-5001).">
+    <link rel="canonical" href="https://shop.highzonebio.com/order.html">
+    <meta property="og:title" content="주문·결제 및 처방 접수 | 하이존바이오 공식 전문 쇼핑몰">
+    <meta property="og:description" content="농가 직공급 안전 결제 · 연구소 물류센터 당일 출고 시스템 (063-855-5001)">
+    <meta property="og:image" content="https://shop.highzonebio.com/assets/products_lineup@2x.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -196,8 +201,25 @@
             작물별 정량 희석 가이드가 동봉되어 당일 출고 준비됩니다.<br>
             접수된 내역은 [마이페이지 · 주문/처방 보관함]에서 언제든 확인하실 수 있습니다.
         </p>
-        <div id="modal-order-summary" class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-left text-xs space-y-1.5 mb-5">
+        <div id="modal-order-summary" class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-left text-xs space-y-1.5 mb-3">
             <!-- Populated dynamically -->
+        </div>
+        <div class="bg-amber-50 border border-amber-300 rounded-2xl p-3.5 text-left text-xs space-y-2 mb-4">
+            <p class="font-black text-amber-950">⚡ 빠른 당일 출고 & 전용 입금계좌/결제 링크 즉시 안내</p>
+            <p class="text-[11px] text-amber-900 leading-relaxed">
+                아래 <strong>[문자 1초 전송]</strong> 버튼을 누르시면 전주대 R&D 물류팀으로 주문서가 즉시 도착하여 입금계좌·카드결제창·송장번호를 바로 보내드립니다.
+            </p>
+            <div class="flex flex-col gap-1.5 pt-1">
+                <a id="modal-order-sms-btn" href="sms:010-8201-7763" class="w-full py-3 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs text-center shadow-sm">
+                    💬 연구소 물류팀에 주문서 문자(SMS) 1초 전송하기 →
+                </a>
+                <a href="tel:063-855-5001" class="w-full py-2.5 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-black text-xs text-center">
+                    📞 출고·결제 직통 전화 확인 (063-855-5001)
+                </a>
+                <a id="modal-order-mail-btn" href="mailto:partner@highzonebio.kr" class="w-full py-2 px-4 rounded-xl bg-white border border-amber-300 text-slate-700 font-bold text-[11px] text-center">
+                    ✉️ 이메일로 주문서/세금계산서 요청 발송
+                </a>
+            </div>
         </div>
         <div class="grid grid-cols-2 gap-2">
             <a href="mypage.html" class="py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-xs text-center">
@@ -329,14 +351,20 @@ document.addEventListener('DOMContentLoaded', () => {
         HighzoneCart.clearCart();
 
         document.getElementById('modal-order-no').textContent = `주문번호 #${orderNo}`;
+        const itemsSummaryStr = items.map(i => `${i.name}×${i.qty}`).join(', ');
         document.getElementById('modal-order-summary').innerHTML = `
             <p><span class="text-slate-400 font-bold">수령인:</span> <strong class="text-slate-800">${name} (${phone})</strong></p>
             <p><span class="text-slate-400 font-bold">배송지:</span> <span class="text-slate-700">${addr1} ${addr2}</span></p>
-            <p><span class="text-slate-400 font-bold">주문품목:</span> <strong class="text-emerald-700">${items.map(i => `${i.name}×${i.qty}`).join(', ')}</strong></p>
+            <p><span class="text-slate-400 font-bold">주문품목:</span> <strong class="text-emerald-700">${itemsSummaryStr}</strong></p>
             <p><span class="text-slate-400 font-bold">결제방식:</span> <span class="text-slate-700">${payMethod}</span></p>
             <p class="pt-1 border-t border-slate-200"><span class="text-slate-400 font-bold">최종결제액:</span> <strong class="text-base font-black text-emerald-700">${total.toLocaleString()}원</strong></p>
             <p class="text-[11px] text-emerald-800 font-bold pt-1">📞 연구소 출고·입금 확인 직통: 063-855-5001</p>
         `;
+        const orderMsgText = `[하이존바이오 주문접수 #${orderNo}]\n수령인: ${name} (${phone})\n배송지: ${addr1} ${addr2}\n품목: ${itemsSummaryStr}\n결제액: ${total.toLocaleString()}원 (${payMethod})\n영세율/사업자: ${tax || '미입력'}\n요청: ${memo}`;
+        const smsBtn = document.getElementById('modal-order-sms-btn');
+        const mailBtn = document.getElementById('modal-order-mail-btn');
+        if (smsBtn) smsBtn.href = `sms:010-8201-7763?body=${encodeURIComponent(orderMsgText)}`;
+        if (mailBtn) mailBtn.href = `mailto:partner@highzonebio.kr?subject=${encodeURIComponent('[하이존바이오 주문서 #' + orderNo + '] ' + name + '님')}&body=${encodeURIComponent(orderMsgText)}`;
         document.getElementById('order-success-modal').classList.remove('hidden');
     });
 });
