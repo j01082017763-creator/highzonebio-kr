@@ -1,6 +1,6 @@
 /**
  * HIGHZONE BIO - Unified Shopping Mall & Prescription Engine (v3.0)
- * Official Specialized Shopping Mall (http://shop.highzonebio.com)
+ * Official Specialized Shopping Mall (http://shop.hizonebio.com)
  * R&D Center: 전주대학교 벤처창업관 산학협력 R&D 연구소 | 고객센터: 063-855-5001
  */
 
@@ -1144,7 +1144,7 @@ const HighzoneSystem = {
                         "name": `${p.name} (${p.volume})`,
                         "alternateName": p.engName,
                         "sku": p.code,
-                        "image": `https://shop.highzonebio.com/${p.image}`,
+                        "image": `https://shop.hizonebio.com/${p.image}`,
                         "description": `${p.shortDesc} [적용작물: ${p.targetCrops}] [농가 500L 희석: ${p.dilution.farm500L}]`,
                         "brand": { "@type": "Brand", "name": "하이존바이오 (HIGHZONE BIO)" },
                         "manufacturer": {
@@ -1154,7 +1154,7 @@ const HighzoneSystem = {
                         },
                         "offers": {
                             "@type": "Offer",
-                            "url": `https://shop.highzonebio.com/product-detail.html?id=${p.id}`,
+                            "url": `https://shop.hizonebio.com/product-detail.html?id=${p.id}`,
                             "priceCurrency": "KRW",
                             "price": p.price,
                             "availability": "https://schema.org/InStock",
@@ -1263,8 +1263,8 @@ const HighzoneSystem = {
                     </div>
 
                     <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800 text-[11px]">
-                        <a href="https://kr.highzonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold">🏢 대한민국 공식 회사·기술 홈피</a>
-                        <a href="https://highzonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">🌐 Global Site (EN)</a>
+                        <a href="https://kr.hizonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold">🏢 대한민국 공식 회사·기술 홈피</a>
+                        <a href="https://hizonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">🌐 Global Site (EN)</a>
                         <a href="products.html" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold">📦 14종 전제품 처방표</a>
                         <a href="ai-hospital.html" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold">🩺 AI 식물병원 무료진단</a>
                     </div>
