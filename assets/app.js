@@ -1258,7 +1258,7 @@ const HighzoneSystem = {
                         <p><strong class="text-slate-200">상호 · 대표자:</strong> 유한회사 하이존바이오 | 대표이사: 김덕수 | 사업자등록번호: 707-81-02864 (법인등록번호: 210114-0163746)</p>
                         <p><strong class="text-slate-200">연구소·본사 소재지:</strong> 전북특별자치도 전주시 완산구 천잠로 303, 1층 108호 (전주대학교 벤처창업관 산학협력 R&D 연구소)</p>
                         <p><strong class="text-slate-200">고객센터·대량납품 직통:</strong> <a href="tel:063-855-5001" class="text-amber-300 font-bold underline">063-855-5001</a> (평일 09:00~18:00) | <strong class="text-slate-200">긴급·문자 처방접수:</strong> <a href="sms:010-8201-7763" class="text-emerald-300 font-bold underline">010-8201-7763</a></p>
-                        <p><strong class="text-slate-200">공식 이메일:</strong> partner@highzonebio.kr · info@highzonebio.com</p>
+                        <p><strong class="text-slate-200">공식 이메일:</strong> partner@highzonebio.kr · info@hizonebio.com</p>
                         <p class="text-[10px] text-slate-500 pt-1">※ 반품·교환 안내: 제품 수령 후 7일 이내 고객센터(063-855-5001) 접수 (제품 불량·파손 시 왕복 배송비 당사 100% 부담)</p>
                     </div>
 
