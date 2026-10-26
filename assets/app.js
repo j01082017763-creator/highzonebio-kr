@@ -1032,8 +1032,27 @@ const HighzoneConsult = {
                             맞춤 처방 상담 접수하기
                         </button>
                     </form>
+                    <div id="consult-success-view" class="hidden space-y-3 bg-emerald-50 p-4 rounded-2xl border border-emerald-200 text-xs">
+                        <div class="flex items-center gap-2 text-emerald-900 font-black text-sm">
+                            <span>✅ 상담 내용이 보관함에 접수되었습니다!</span>
+                        </div>
+                        <p class="text-slate-700 leading-relaxed">
+                            더욱 빠른 실시간 처방 및 단가 안내를 원하시면 아래 버튼으로 연구소 전담팀에 즉시 전송해 주세요.
+                        </p>
+                        <div class="flex flex-col gap-2 pt-1">
+                            <a id="consult-sms-link" href="sms:010-8201-7763" class="w-full py-3 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-center shadow-sm">
+                                💬 연구소 직통 문자로 상담내역 1초 전송하기 →
+                            </a>
+                            <a href="tel:063-855-5001" class="w-full py-3 px-4 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-black text-center">
+                                📞 연구소 직통 전화 연결 (063-855-5001)
+                            </a>
+                            <a id="consult-mail-link" href="mailto:partner@highzonebio.kr" class="w-full py-2.5 px-4 rounded-xl bg-white border border-slate-300 text-slate-700 font-bold text-center">
+                                ✉️ 이메일로 처방·견적서 요청 보내기
+                            </a>
+                        </div>
+                    </div>
                     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                        <span>📞 연구소 직통 전화상담</span>
+                        <span>📞 전주대 산학협력 R&D 연구소 직통</span>
                         <a href="tel:063-855-5001" class="font-extrabold text-emerald-700 hover:underline">063-855-5001 (바로걸기)</a>
                     </div>
                 </div>
@@ -1045,10 +1064,19 @@ const HighzoneConsult = {
         const modal = document.getElementById('highzone-consult-modal');
         const closeBtn = document.getElementById('close-consult-modal');
         const form = document.getElementById('consult-form');
+        const successView = document.getElementById('consult-success-view');
 
-        closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            if (form) form.classList.remove('hidden');
+            if (successView) successView.classList.add('hidden');
+        });
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.add('hidden');
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                if (form) form.classList.remove('hidden');
+                if (successView) successView.classList.add('hidden');
+            }
         });
 
         form.addEventListener('submit', (e) => {
@@ -1067,7 +1095,14 @@ const HighzoneConsult = {
                 localStorage.setItem('highzone_inquiries_v3', JSON.stringify(list));
             } catch (err) {}
 
-            modal.classList.add('hidden');
+            const msgText = `[하이존바이오 처방/납품상담 ${inquiry.id}]\n성함: ${inquiry.name}\n연락처: ${inquiry.phone}\n작물/규모: ${inquiry.crop}\n문의내용: ${inquiry.memo || '맞춤 처방 및 납품 상담 요청'}`;
+            const smsEl = document.getElementById('consult-sms-link');
+            const mailEl = document.getElementById('consult-mail-link');
+            if (smsEl) smsEl.href = `sms:010-8201-7763?body=${encodeURIComponent(msgText)}`;
+            if (mailEl) mailEl.href = `mailto:partner@highzonebio.kr?subject=${encodeURIComponent('[하이존바이오 상담신청] ' + inquiry.name + ' (' + inquiry.crop + ')')}&body=${encodeURIComponent(msgText)}`;
+
+            form.classList.add('hidden');
+            if (successView) successView.classList.remove('hidden');
             form.reset();
             HighzoneCart.showToast(`✅ [${inquiry.name}]님의 맞춤 처방 문의가 접수되었습니다. (직통: 063-855-5001)`);
         });
@@ -1076,6 +1111,10 @@ const HighzoneConsult = {
     open(prefillCrop = '') {
         this.initModal();
         const modal = document.getElementById('highzone-consult-modal');
+        const form = document.getElementById('consult-form');
+        const successView = document.getElementById('consult-success-view');
+        if (form) form.classList.remove('hidden');
+        if (successView) successView.classList.add('hidden');
         if (prefillCrop) {
             const cropInput = document.getElementById('consult-crop');
             if (cropInput) cropInput.value = prefillCrop;
@@ -1084,15 +1123,177 @@ const HighzoneConsult = {
     }
 };
 
+/**
+ * 3. AI / SEO Schema.org & Official Footer Auto-Injector
+ */
+const HighzoneSystem = {
+    injectSEO() {
+        try {
+            const path = window.location.pathname;
+            const params = new URLSearchParams(window.location.search);
+
+            // Dynamic Product JSON-LD for product-detail.html
+            if (path.includes('product-detail.html')) {
+                const pid = resolveProductId(params.get('id'));
+                const p = HIGHZONE_PRODUCTS[pid];
+                if (p && !document.getElementById('hz-dynamic-product-ld')) {
+                    document.title = `${p.name} (${p.volume}) — ${p.categoryLabel} | 하이존바이오 공식 전문 쇼핑몰`;
+                    const ld = {
+                        "@context": "https://schema.org",
+                        "@type": "Product",
+                        "name": `${p.name} (${p.volume})`,
+                        "alternateName": p.engName,
+                        "sku": p.code,
+                        "image": `https://shop.highzonebio.com/${p.image}`,
+                        "description": `${p.shortDesc} [적용작물: ${p.targetCrops}] [농가 500L 희석: ${p.dilution.farm500L}]`,
+                        "brand": { "@type": "Brand", "name": "하이존바이오 (HIGHZONE BIO)" },
+                        "manufacturer": {
+                            "@type": "Organization",
+                            "name": "주식회사 하이존바이오 · 전주대학교 벤처창업관 산학협력 R&D 연구소",
+                            "telephone": "+82-63-855-5001"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "url": `https://shop.highzonebio.com/product-detail.html?id=${p.id}`,
+                            "priceCurrency": "KRW",
+                            "price": p.price,
+                            "availability": "https://schema.org/InStock",
+                            "seller": { "@type": "Organization", "name": "하이존바이오 공식 전문 쇼핑몰" }
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.9",
+                            "reviewCount": "148"
+                        }
+                    };
+                    const s = document.createElement('script');
+                    s.type = 'application/ld+json';
+                    s.id = 'hz-dynamic-product-ld';
+                    s.textContent = JSON.stringify(ld);
+                    document.head.appendChild(s);
+                }
+            }
+        } catch (e) {}
+    },
+
+    injectOfficialFooter() {
+        // Unify bottom navigation bar across all 6 main pages so tabs never change or confuse visitors
+        const bottomNav = document.querySelector('nav.fixed.bottom-0');
+        if (bottomNav) {
+            const p = window.location.pathname;
+            const isHome = p.endsWith('/') || p.endsWith('index.html');
+            const isProducts = p.includes('products.html');
+            const isAi = p.includes('ai-hospital.html');
+            const isLife = p.includes('lifestyle.html');
+            const isStories = p.includes('stories.html');
+            const isMy = p.includes('mypage.html');
+
+            const tabClass = (active) => active
+                ? 'flex flex-col items-center justify-center py-1 px-1 text-emerald-700 font-black scale-105 transition-all'
+                : 'flex flex-col items-center justify-center py-1 px-1 text-slate-500 hover:text-emerald-700 font-bold transition-all';
+
+            bottomNav.className = 'fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[560px] bg-white/95 backdrop-blur-md border-t border-slate-200 px-1 py-1.5 grid grid-cols-6 items-center z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]';
+            bottomNav.innerHTML = `
+                <a href="index.html" class="${tabClass(isHome)}">
+                    <span class="text-base leading-none">🏠</span>
+                    <span class="text-[10px] mt-1 tracking-tight">홈</span>
+                </a>
+                <a href="products.html" class="${tabClass(isProducts)}">
+                    <span class="text-base leading-none">🧪</span>
+                    <span class="text-[10px] mt-1 tracking-tight">전제품14종</span>
+                </a>
+                <a href="ai-hospital.html" class="${tabClass(isAi)}">
+                    <span class="text-base leading-none">🩺</span>
+                    <span class="text-[10px] mt-1 tracking-tight">AI식물병원</span>
+                </a>
+                <a href="lifestyle.html" class="${tabClass(isLife)}">
+                    <span class="text-base leading-none">🪴</span>
+                    <span class="text-[10px] mt-1 tracking-tight">수경키트</span>
+                </a>
+                <a href="stories.html" class="${tabClass(isStories)}">
+                    <span class="text-base leading-none">🏆</span>
+                    <span class="text-[10px] mt-1 tracking-tight">실증사례</span>
+                </a>
+                <a href="mypage.html" class="${tabClass(isMy)}">
+                    <span class="text-base leading-none">📋</span>
+                    <span class="text-[10px] mt-1 tracking-tight">주문·처방함</span>
+                </a>
+            `;
+        }
+
+        if (document.getElementById('hz-official-shop-footer')) return;
+        const footerHtml = `
+            <footer id="hz-official-shop-footer" class="w-full bg-slate-900 text-slate-300 px-5 pt-7 pb-28 text-xs border-t border-slate-800 mt-6">
+                <div class="max-w-[560px] mx-auto space-y-4">
+                    <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-800">
+                        <div>
+                            <p class="text-white font-black text-sm">주식회사 하이존바이오 (HIGHZONE BIO)</p>
+                            <p class="text-[11px] text-emerald-400 font-bold">전주대학교 벤처창업관 산학협력 R&D 연구소 공식 직영몰</p>
+                        </div>
+                        <a href="tel:063-855-5001" class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-black text-xs">
+                            📞 대표전화 063-855-5001
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 text-[11px] bg-slate-800/70 p-3 rounded-xl border border-slate-700/70">
+                        <div>
+                            <span class="text-slate-400 block">원천 기술 특허</span>
+                            <strong class="text-white">특허 제10-2493517호</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block">공인 시험 인증</span>
+                            <strong class="text-emerald-300">KTR 99.9% 항균·살균 완료</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block">출고 및 배송 안내</span>
+                            <strong class="text-white">오후 3시 당일출고 · 5만원 무료배송</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block">세무·보조사업 증빙</span>
+                            <strong class="text-amber-300">영세율 세금계산서·현금영수증 즉시발행</strong>
+                        </div>
+                    </div>
+
+                    <div class="text-[11px] text-slate-400 leading-relaxed space-y-1">
+                        <p><strong class="text-slate-200">연구소·물류 소재지:</strong> 전북특별자치도 전주시 완산구 천잠로 303 전주대학교 벤처창업관 #108 산학협력 R&D 연구소</p>
+                        <p><strong class="text-slate-200">고객센터·대량납품 직통:</strong> <a href="tel:063-855-5001" class="text-amber-300 font-bold underline">063-855-5001</a> (평일 09:00~18:00) | <strong class="text-slate-200">긴급·문자 처방접수:</strong> <a href="sms:010-8201-7763" class="text-emerald-300 font-bold underline">010-8201-7763</a></p>
+                        <p><strong class="text-slate-200">공식 이메일:</strong> partner@highzonebio.kr · info@highzonebio.com</p>
+                        <p class="text-[10px] text-slate-500 pt-1">※ 반품·교환 안내: 제품 수령 후 7일 이내 고객센터(063-855-5001) 접수 (제품 불량·파손 시 왕복 배송비 당사 100% 부담)</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800 text-[11px]">
+                        <a href="https://kr.highzonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold">🏢 대한민국 공식 회사·기술 홈피</a>
+                        <a href="https://highzonebio.com" target="_blank" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">🌐 Global Site (EN)</a>
+                        <a href="products.html" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold">📦 14종 전제품 처방표</a>
+                        <a href="ai-hospital.html" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold">🩺 AI 식물병원 무료진단</a>
+                    </div>
+
+                    <p class="text-[10px] text-slate-500 pt-1">© 2026 HIGHZONE BIO Inc. All Rights Reserved. Carbon & Ion Biotechnology for Sustainable Agriculture.</p>
+                </div>
+            </footer>
+        `;
+
+        const mainWrap = document.querySelector('main') || document.querySelector('.max-w-\\[560px\\]') || document.body;
+        if (mainWrap && mainWrap !== document.body) {
+            mainWrap.insertAdjacentHTML('beforeend', footerHtml);
+        } else {
+            document.body.insertAdjacentHTML('beforeend', footerHtml);
+        }
+    }
+};
+
 window.HighzoneCart = HighzoneCart;
 window.HighzoneConsult = HighzoneConsult;
+window.HighzoneSystem = HighzoneSystem;
 
 /**
- * 3. Global DOM Wiring & Cross-Site Navigation Bar
+ * 4. Global DOM Wiring & Cross-Site Navigation Bar
  */
 document.addEventListener('DOMContentLoaded', () => {
     HighzoneCart.initDrawer();
     HighzoneConsult.initModal();
+    HighzoneSystem.injectSEO();
+    HighzoneSystem.injectOfficialFooter();
 
     // Bind any cart open triggers
     document.querySelectorAll('[data-action="open-cart"], #header-cart-btn, .open-cart-btn').forEach(btn => {
