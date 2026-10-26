@@ -43,34 +43,34 @@ const HIGHZONE_PRODUCTS = {
         id: 'redsol-500',
         code: 'HZ-RX-02',
         name: '바이오레드졸',
-        engName: 'BIO REDSOL · ROOT & SOIL DETOXIFIER',
+        engName: 'BIO REDSOL · SILVER & NATURAL OIL FROST/ROOT SHIELD',
         volume: '500ml',
         category: 'soil',
-        categoryLabel: '연작장해 · 뿌리 활착',
+        categoryLabel: '냉해방지 · 뿌리활착 · 병충해예방',
         price: 28000,
         originalPrice: 35000,
         discountRate: 20,
-        image: 'assets/prod_1.png',
+        image: 'assets/prod_redsol.png',
         thumb: 'assets/prod_redsol.jpg',
-        badges: ['3년 농가 실증 1위', '연작장해 염류 분해', '뿌리 세근 200% 폭발'],
-        shortDesc: '만성 연작장해 토양의 불용성 염류를 영양분으로 전환하고, 썩어가는 뿌리에 산소와 길항 에너지를 공급하여 흰색 잔뿌리(세근)를 폭발적으로 발달시키는 하이존바이오 대표 시그니처 처방.',
-        targetCrops: '시설하우스(토마토, 딸기, 참외, 오이, 고추), 마늘/양파, 인삼 및 연작 피해 노지 전 작물',
+        badges: ['은(Ag)+천연오일 수용화 기술', '-6°C 냉해방지 · 세근 폭발', '친환경 병충해 방지도움'],
+        shortDesc: '은(Ag) 및 천연오일 초미세 수용화 기술로 완성한 하이존바이오 시그니처 처방제. 개화기·정식기 영하 -6°C 급격한 저온 냉해를 방어하고, 연작 토양의 염류를 분해하여 새하얀 잔뿌리(세근) 발달과 병충해 저항성을 동시에 끌어올립니다.',
+        targetCrops: '과수 개화기 냉해방지(사과, 배, 복숭아), 시설하우스(토마토, 딸기, 참외, 오이, 고추), 마늘/양파, 인삼 및 노지 전 작물',
         dilution: {
             farm500L: '500ml~1,000ml (500~1,000배액 관주/엽면)',
             knapsack20L: '20~40ml (뚜껑 1~2컵)',
-            home1L: '2ml (화분 토양 관주 시)'
+            home1L: '2ml (화분 토양 관주 및 엽면 분무)'
         },
         mechanism: [
-            { step: 'STEP 01 · 토양 고착 염류 및 가스 분해', desc: '연작 토양에 쌓인 인산염·황산염 등 불용성 염류 사슬을 끊어 작물이 즉시 흡수 가능한 이온 영양소로 전환합니다.' },
-            { step: 'STEP 02 · 근권 유해균 억제 및 산소 공급', desc: '뿌리 주변 혐기성 부패 환경을 개선하여 시들음·뿌리썩음 원인을 차단하고 근권 미생물 활력을 복원합니다.' },
-            { step: 'STEP 03 · 백색 세근(잔뿌리) 폭발 유도', desc: '새하얀 흡수근(세근)을 2배 이상 뻗게 하여 비료 흡수율과 후기 수확량을 극대화합니다.' }
+            { step: 'STEP 01 · 은(Ag) + 천연오일 나노 수용화 보호막', desc: '세포막 인지질 층을 코팅하여 개화기·초기 영하권 저온 냉해(-6°C) 시 세포 결빙과 조직 손상을 강력히 방어합니다.' },
+            { step: 'STEP 02 · 연작 염류 분해 및 근권 유해균 억제', desc: '연작 토양에 쌓인 불용성 염류 사슬을 끊어 이온 영양소로 전환하고 뿌리 주변 부패균을 제어합니다.' },
+            { step: 'STEP 03 · 백색 세근(잔뿌리) 200% 폭발 유도', desc: '새하얀 흡수근(세근)을 폭발적으로 뻗게 하여 비료 흡수율과 후기 수확량을 극대화합니다.' }
         ],
-        goldenTime: '정식 전 토양 처리 / 정식 후 초기 관주 / 장마철 과습 후 뿌리 세력 회복기 (10~14일 간격 관주 권장)',
+        goldenTime: '개화기 냉해 예보 2~3일 전 엽면살포 / 정식 전·후 뿌리 활착 관주 / 장마철 과습 후 세력 회복기 (10~14일 간격)',
         synergyId: 'inca-500',
-        synergyReason: '바이오레드졸로 뿌리 세근을 틔운 뒤 [에이스 인카]의 칼슘·인산을 공급하면 과실 비대와 당도·경도가 동시에 완성됩니다.',
+        synergyReason: '바이오레드졸로 냉해를 막고 뿌리 세근을 틔운 뒤 [에이스 인카]의 칼슘·인산을 공급하면 과실 비대와 당도·경도가 동시에 완성됩니다.',
         reviews: [
             { author: '이*철 대표 (충남 부여 · 시설 방울토마토 8동)', rating: 5, date: '2026.10', text: '10년 연작 하우스라 염류집적이 심했는데 바이오레드졸 관주 2회 만에 흙이 부드러워지고 뽑아본 뿌리에 하얀 잔뿌리가 꽉 찼습니다.' },
-            { author: '정*수 농가 (경남 창녕 · 대서마늘 3,000평)', rating: 5, date: '2026.08', text: '봄철 잎마름 오던 포장에 레드졸+인카 처방대로 넣고 평당 수확량이 25% 넘게 늘었습니다.' }
+            { author: '정*수 농가 (경남 창녕 · 대서마늘 3,000평)', rating: 5, date: '2026.08', text: '봄철 꽃샘추위 냉해와 잎마름 오던 포장에 레드졸+인카 처방대로 넣고 평당 수확량이 25% 넘게 늘었습니다.' }
         ]
     },
     'dobok-100': {
@@ -84,7 +84,7 @@ const HIGHZONE_PRODUCTS = {
         price: 15000,
         originalPrice: 20000,
         discountRate: 25,
-        image: 'assets/prod_4.png',
+        image: 'assets/prod_dobok.png',
         thumb: 'assets/prod_dobok.jpg',
         badges: ['초고농축 규소·칼슘 결합', '태풍·장마 쓰러짐 방지', '절간 단축·세포벽 강화'],
         shortDesc: '태풍·집중호우에도 쓰러지지 않는 강철 줄기 처방! 수용성 나노 규소와 이온 칼슘이 식물 세포벽을 벽돌처럼 단단하게 결합시켜 웃자람(도장)을 억제하고 마디를 굵고 짧게 만듭니다.',
@@ -111,33 +111,33 @@ const HIGHZONE_PRODUCTS = {
         id: 'goodbye-500',
         code: 'HZ-RX-04',
         name: '굿바이충',
-        engName: 'GOODBYE-CHUNG · ECO PHYTONCIDE DEFENSE',
+        engName: 'GOODBYE-CHUNG · ORGANIC PEST & DISEASE CONTROL',
         volume: '500ml',
         category: 'pest',
-        categoryLabel: '친환경 해충 기피 · 방어',
+        categoryLabel: '병해충관리용 유기농업자재',
         price: 19000,
         originalPrice: 25000,
         discountRate: 24,
-        image: 'assets/prod_5.png',
+        image: 'assets/prod_goodbye.png',
         thumb: 'assets/prod_goodbye.jpg',
-        badges: ['잔류농약 ZERO', '수확 당일 살포 가능', '진딧물·총채·응애 기피'],
-        shortDesc: '고농축 식물성 테르펜·피톤치드 추출물 기반으로 해충의 호흡기 교란 및 섭식 저해를 유도하는 무독성 친환경 방어제. 내성이 생기지 않으며 수확 직전이나 가정 실내에서도 안전합니다.',
-        targetCrops: '딸기, 고추, 오이, 상추, 쌈채류, 화훼류 및 무농약·유기농 인증 농가 전 작물',
+        badges: ['유기농업자재 공시-2-6-131', '잔류농약 ZERO · 수확당일 살포', '진딧물·응애·총채·흰가루·무름'],
+        shortDesc: '국립농산물품질관리원 병해충관리용 유기농업자재(공시-2-6-131) 정식 등록 광범위 병해충 관리제. 진딧물, 응애, 총채벌레, 온실가루이, 나방류부터 흰가루병, 무름병, 노균병까지 내성이나 잔류농약 걱정 없이 동시에 관리합니다.',
+        targetCrops: '딸기, 고추, 오이, 토마토, 상추, 쌈채류, 수도작, 과수류 및 무농약·유기농 인증 농가 전 작물',
         dilution: {
             farm500L: '500ml~1,000ml (500~1,000배액)',
             knapsack20L: '20~40ml (잎 뒷면까지 골고루 살포)',
             home1L: '2ml (분무기에 희석하여 주 1~2회 살포)'
         },
         mechanism: [
-            { step: 'STEP 01 · 천연 테르펜 기피 보호막 형성', desc: '식물 고유의 방어 물질인 테르펜·시네올 성분이 잎 표면에 코팅되어 해충의 접근과 산란을 차단합니다.' },
-            { step: 'STEP 02 · 해충 외피 지질층 연화 및 섭식 중단', desc: '미세 해충(진딧물, 응애, 총채벌레, 가루이)의 기문을 물리적으로 덮어 활동을 즉시 멈추게 합니다.' },
-            { step: 'STEP 03 · 농약 잔류 걱정 없는 안전 수확', desc: '화학적 합성농약 성분이 전혀 없어 연속 수확하는 과채류·쌈채류에 언제든 안심하고 사용할 수 있습니다.' }
+            { step: 'STEP 01 · 천연 식물성 활성성분 기피·섭식 중단', desc: '진딧물, 응애, 총채벌레, 온실가루이, 먹노린재, 멸구류, 나방 애벌레의 기문을 물리적으로 덮고 신경·섭식 활동을 즉시 차단합니다.' },
+            { step: 'STEP 02 · 광범위 병원성 곰팡이·세균 동시 억제', desc: '흰가루병, 무름병, 노균병, 적성병, 도열병 포자의 발아와 균사 확산을 억제하여 병해충을 한 번에 케어합니다.' },
+            { step: 'STEP 03 · 유기농업자재 공시(2-6-131) 무독성 안전 수확', desc: '화학적 합성농약 성분이 전혀 없어 연속 수확하는 과채류·쌈채류에 수확 당일에도 안심하고 사용할 수 있습니다.' }
         ],
-        goldenTime: '해충 발생 초기(예방 시 7~10일 간격 / 발생 시 3~5일 간격 2회 연속 잎 뒷면 집중 살포)',
+        goldenTime: '병해충 발생 초기(예방 시 7~10일 간격 / 발생 시 3~5일 간격 2회 연속 잎 뒷면 집중 살포)',
         synergyId: 'silver-500',
-        synergyReason: '[굿바이충]으로 해충을 막고 [순수 은수용액 Ag]으로 곰팡이·세균까지 동시 방어하면 완벽한 무농약 이원 방제 시스템이 됩니다.',
+        synergyReason: '[굿바이충]으로 해충과 주요 병해를 막고 [순수 은수용액 Ag]으로 고온다습기 탄저·세균까지 이중 방어하면 완벽한 무농약 방제 시스템이 됩니다.',
         reviews: [
-            { author: '윤*희 농가 (충남 논산 · 설향딸기 5동)', rating: 5, date: '2026.10', text: '수확 철에는 농약을 못 쳐서 응애·총채 때문에 골치 아팠는데 굿바이충은 꿀벌에도 안전하고 냄새도 상쾌해서 매주 칩니다.' },
+            { author: '윤*희 농가 (충남 논산 · 설향딸기 5동)', rating: 5, date: '2026.10', text: '유기농업자재 공시 제품이라 친환경 인증 검사 걱정 없이 씁니다. 응애·총채·흰가루가 한 번에 잡혀서 너무 편합니다.' },
             { author: '한*민 고객 (경기 분당 · 홈가드닝)', rating: 5, date: '2026.09', text: '아이 키우는 집이라 살충제 못 썼는데 화분 날파리랑 진딧물이 싹 사라졌어요!' }
         ]
     },
@@ -152,7 +152,7 @@ const HIGHZONE_PRODUCTS = {
         price: 25000,
         originalPrice: 32000,
         discountRate: 22,
-        image: 'assets/prod_6.png',
+        image: 'assets/prod_silver.png',
         thumb: 'assets/prod_silver.jpg',
         badges: ['KTR 99.9% 항균 테스트 완료', '순도 99.99% 나노 콜로이드 은', '곰팡이·세균성 병해 예방'],
         shortDesc: '순도 99.99% 은(Ag)을 초미세 나노 이온 상태로 안정화한 고기능성 수용액. 작물 표면의 유해 곰팡이 포자와 세균의 산소 대사 효소를 불활성화하여 탄저·무름·흰가루·잿빛곰팡이를 친환경적으로 제어합니다.',
@@ -186,7 +186,7 @@ const HIGHZONE_PRODUCTS = {
         price: 26000,
         originalPrice: 33000,
         discountRate: 21,
-        image: 'assets/prod_7.png',
+        image: 'assets/prod_selenium.png',
         thumb: 'assets/prod_selenium.jpg',
         badges: ['고부가가치 셀레늄 농산물 인증용', '당도(Brix) +2~3 상승', '일소(햇빛데임)·노화 방지'],
         shortDesc: '세계보건기구(WHO)가 주목한 필수 항산화 미네랄 셀레늄(Se)을 식물이 100% 흡수할 수 있는 이온 수용액으로 구현. 과실의 당도와 착색을 극대화하고 셀레늄 기능성 브랜드 농산물 생산을 가능하게 합니다.',
@@ -215,14 +215,14 @@ const HIGHZONE_PRODUCTS = {
         engName: 'ANTIOXIDANT TOMATO SPECIAL FORMULA · 1000ml',
         volume: '1000ml (대용량)',
         category: 'crop',
-        categoryLabel: '토마토 전용 · 열과·배꼽썩음 방지',
+        categoryLabel: '토마토 전용 · 농촌진흥청 특허',
         price: 28000,
         originalPrice: 35000,
         discountRate: 20,
-        image: 'assets/downloaded_28.jpg',
+        image: 'assets/prod_13.png',
         thumb: 'assets/downloaded_28.jpg',
-        badges: ['토마토 전용 맞춤 처방', '리코펜·당도 극대화', '배꼽썩음·열과 완벽 제어'],
-        shortDesc: '대추방울토마토·완숙토마토 농가의 최대 고민인 배꼽썩음과(칼슘 결핍), 열과(갈라짐), 빈 화방 문제를 한 번에 해결하는 1,000ml 대용량 전용 바이오 처방제.',
+        badges: ['농촌진흥청 특허기술 적용', '리코펜·당도 극대화', '배꼽썩음·열과 완벽 제어'],
+        shortDesc: '농촌진흥청 특허기술을 기반으로 개발된 토마토 전용 1,000ml 대용량 바이오 처방제. 배꼽썩음과(칼슘 결핍), 열과(갈라짐), 빈 화방 문제를 해결하고 리코펜·항산화 성분이 풍부한 고품질 토마토를 완성합니다.',
         targetCrops: '대추방울토마토, 원형방울토마토, 완숙토마토, 스테비아토마토 원물 재배 농가',
         dilution: {
             farm500L: '500ml~1,000ml (500~1,000배액)',
@@ -248,14 +248,14 @@ const HIGHZONE_PRODUCTS = {
         engName: 'ANTIOXIDANT PEPPER SPECIAL FORMULA · 500ml',
         volume: '500ml',
         category: 'crop',
-        categoryLabel: '고추 전용 · 낙과방지·탄저저항',
+        categoryLabel: '고추 전용 · 농촌진흥청 특허',
         price: 22000,
         originalPrice: 28000,
         discountRate: 21,
-        image: 'assets/downloaded_29.jpg',
+        image: 'assets/prod_12.png',
         thumb: 'assets/downloaded_29.jpg',
-        badges: ['고추 다수확 전용 처방', '석회결핍·총채·낙화 예방', '두꺼운 과피·선홍빛 건고추'],
-        shortDesc: '고추 재배 전 주기에 맞춘 고농축 항산화 미네랄 포뮬러. 장마철 꽃떨이(낙화·낙과)와 칼슘 결핍(어깨빠짐)을 막고 과피를 두껍게 키워 건고추 근수를 확실하게 늘려줍니다.',
+        badges: ['농촌진흥청 특허기술 적용', '석회결핍·낙화 예방', '두꺼운 과피·선홍빛 건고추'],
+        shortDesc: '농촌진흥청 특허기술이 적용된 고추 재배 전 주기 전용 항산화 미네랄 포뮬러. 장마철 꽃떨이(낙화·낙과)와 칼슘 결핍(어깨빠짐)을 막고 과피를 두껍게 키워 건고추 근수를 확실하게 늘려줍니다.',
         targetCrops: '노지 건고추, 시설 청양고추, 꽈리고추, 파프리카, 피망',
         dilution: {
             farm500L: '500ml (1,000배액)',
@@ -285,7 +285,7 @@ const HIGHZONE_PRODUCTS = {
         price: 25000,
         originalPrice: 32000,
         discountRate: 22,
-        image: 'assets/downloaded_30.jpg',
+        image: 'assets/prod_4.png',
         thumb: 'assets/downloaded_30.jpg',
         badges: ['버섯 균사 생장 특화', '갓 두께·대 탄력 강화', '2~3주기 수확량 유지'],
         shortDesc: '표고·느타리·새송이·양송이·상황버섯 등 버섯 균사체의 효소 활성을 극대화하여 자실체(버섯)를 빈틈없이 단단하고 통통하게 키워주는 버섯 농가 전용 1,000ml 영양제.',
@@ -318,7 +318,7 @@ const HIGHZONE_PRODUCTS = {
         price: 26000,
         originalPrice: 33000,
         discountRate: 21,
-        image: 'assets/downloaded_31.jpg',
+        image: 'assets/prod_7.png',
         thumb: 'assets/downloaded_31.jpg',
         badges: ['천연 고분자 통기성 보습막', '푸른곰팡이(트리코데르마) 억제', '배지 수명 연장'],
         shortDesc: '버섯 배지 표면에 숨 쉬는 천연 바이오 보습 코팅막을 형성하여 배지 내 수분 증발을 막고 외부 잡균(푸른곰팡이 등) 침투를 차단하는 혁신적인 배지 보호제.',
@@ -347,15 +347,15 @@ const HIGHZONE_PRODUCTS = {
         engName: 'ACE IN-CA · IONIC PHOSPHORUS & CALCIUM',
         volume: '500ml',
         category: 'mineral',
-        categoryLabel: '개화·착과 · 경도·저장성',
+        categoryLabel: '증수·비대·화방·도복억제',
         price: 20000,
         originalPrice: 26000,
         discountRate: 23,
-        image: 'assets/downloaded_35.jpg',
+        image: 'assets/prod_1.png',
         thumb: 'assets/downloaded_35.jpg',
-        badges: ['인산+칼슘 불용화 침전 해결', '화아분화·비대·착색 3중 효과', '무름방지·경도 강화'],
-        shortDesc: '일반적으로 섞으면 돌처럼 굳어버리는 인산(P)과 칼슘(Ca)을 특수 킬레이트 이온 공법으로 한 병에 담아낸 하이존바이오의 핵심 기술 결정체. 꽃눈 분화부터 과실 단단함까지 책임집니다.',
-        targetCrops: '사과, 배, 복숭아, 포도, 딸기, 토마토, 참외, 수박, 마늘, 양파, 배추 전 작물',
+        badges: ['인산+칼슘 불용화 침전 해결', '화아분화·비대·착색·도복억제', '무름방지·경도 강화'],
+        shortDesc: '일반적으로 섞으면 돌처럼 굳어버리는 인산(P)과 칼슘(Ca)을 특수 킬레이트 이온 공법으로 한 병에 담아낸 하이존바이오의 핵심 기술 결정체. 꽃눈(화방) 분화부터 과실 비대, 도복 억제, 단단한 경도까지 책임집니다.',
+        targetCrops: '사과, 배, 복숭아, 포도, 딸기, 토마토, 참외, 수박, 고추, 마늘, 양파, 배추, 수도작 전 작물',
         dilution: {
             farm500L: '500ml (1,000배액)',
             knapsack20L: '20ml (뚜껑 1컵)',
@@ -363,8 +363,8 @@ const HIGHZONE_PRODUCTS = {
         },
         mechanism: [
             { step: 'STEP 01 · 침전 없는 인산·칼슘 동시 직행 흡수', desc: '식물 이동성이 가장 느린 칼슘을 인산 에너지와 결합시켜 잎과 과실 끝까지 빠르게 도달시킵니다.' },
-            { step: 'STEP 02 · 우량 화아분화 및 수정률 극대화', desc: '꽃눈을 충실하게 만들고 생식생장 전환을 도와 기형과를 줄이고 정형과 비율을 높입니다.' },
-            { step: 'STEP 03 · 세포벽 펙틴 결합으로 과실 경도 향상', desc: '과육을 아삭하고 단단하게 만들어 수확 후 물러짐과 열과를 완벽히 예방합니다.' }
+            { step: 'STEP 02 · 우량 화아분화 및 수정률 극대화', desc: '꽃눈(화방)을 충실하게 만들고 생식생장 전환을 도와 기형과를 줄이고 정형과 증수 비율을 높입니다.' },
+            { step: 'STEP 03 · 세포벽 펙틴 결합으로 과실 경도 및 도복억제', desc: '과육을 아삭하고 단단하게 만들어 수확 후 물러짐과 열과, 줄기 쓰러짐을 완벽히 예방합니다.' }
         ],
         goldenTime: '개화 전 화아분화기 / 착과 직후 세포분열기 / 수확 2~3주 전 경도·당도 향상기',
         synergyId: 'redsol-500',
@@ -378,17 +378,17 @@ const HIGHZONE_PRODUCTS = {
         code: 'HZ-RX-12',
         name: '게르마늄 수용액 (Ge)',
         engName: 'ORGANIC GERMANIUM Ge · CELL OXYGENATOR',
-        volume: '500ml',
+        volume: '500ml / 1000ml',
         category: 'mineral',
         categoryLabel: '산소공급 · 면역·고기능성',
         price: 35000,
         originalPrice: 45000,
         discountRate: 22,
-        image: 'assets/downloaded_36.jpg',
+        image: 'assets/prod_germanium.png',
         thumb: 'assets/downloaded_36.jpg',
-        badges: ['수용성 유기 게르마늄 이온', '뿌리 산소 공급 · 연작지 활력', '프리미엄 약용·과수 특화'],
-        shortDesc: '기적의 원소라 불리는 유기 게르마늄(Ge)을 초미세 수용액화하여 식물 세포 내 산소 공급을 극대화하고 자가 면역력을 최고조로 끌어올리는 최고급 기능성 미네랄 처방제.',
-        targetCrops: '인삼, 산양삼, 도라지, 더덕, 블루베리, 체리, 사과, 샤인머스캣, 멜론 등 고소득 특용·과수 작물',
+        badges: ['수용성 유기 게르마늄 이온', '뿌리 산소 공급 · 저장성 향상', '프리미엄 약용·과수 특화'],
+        shortDesc: '기적의 원소라 불리는 유기 게르마늄(Ge)을 초미세 수용액화하여 식물 세포 내 산소 공급을 극대화하고 작물 면역력·당도·저장성을 최고조로 끌어올리는 최고급 기능성 미네랄 처방제.',
+        targetCrops: '인삼, 산양삼, 도라지, 더덕, 마늘, 양파, 블루베리, 체리, 사과, 샤인머스캣, 멜론 등 고소득 특용·과수 작물',
         dilution: {
             farm500L: '500ml (1,000배액)',
             knapsack20L: '20ml',
@@ -411,13 +411,13 @@ const HIGHZONE_PRODUCTS = {
         code: 'HZ-RX-13',
         name: '마그네슘 수용액 (Mg)',
         engName: 'IONIC MAGNESIUM Mg · CHLOROPHYLL CORE ENGINE',
-        volume: '500ml',
+        volume: '500ml / 1000ml',
         category: 'mineral',
         categoryLabel: '엽록소 핵 · 황화현상 즉각치료',
         price: 24000,
         originalPrice: 30000,
         discountRate: 20,
-        image: 'assets/downloaded_37.jpg',
+        image: 'assets/prod_magnesium.png',
         thumb: 'assets/downloaded_37.jpg',
         badges: ['엽록소 중심핵 필수 미네랄', '하위엽 황화(노란잎) 3일 내 복원', '일조부족 광합성 보완'],
         shortDesc: '식물 엽록소의 중심 원소인 마그네슘(Mg, 고토)을 즉시 흡수형 이온 수용액으로 처방. 잎맥 사이가 노랗게 변하는 황화 현상을 빠르게 복구하고 흐린 날에도 광합성 효율을 유지시킵니다.',
@@ -443,66 +443,66 @@ const HIGHZONE_PRODUCTS = {
         id: 'blackhole-1000',
         code: 'HZ-RX-14',
         name: '바이오 블랙홀',
-        engName: 'BIO BLACKHOLE · FULVIC & HUMIC SOIL CONDITIONER',
+        engName: 'BIO BLACKHOLE · 90%+ ODOR REMOVAL & SOIL CONDITIONER',
         volume: '1000ml (대용량)',
         category: 'soil',
-        categoryLabel: '토양 떼알구조 · 보비력 극대화',
+        categoryLabel: '냄새제거 90%이상 · 축사·토양환경개선',
         price: 32000,
         originalPrice: 40000,
         discountRate: 20,
-        image: 'assets/downloaded_40.jpg',
+        image: 'assets/prod_6.png',
         thumb: 'assets/downloaded_40.jpg',
-        badges: ['천연 풀빅산·휴믹산 고농축', '단단한 토양 떼알구조 복원', '비료 유실 방지·양이온치환(CEC) 증대'],
-        shortDesc: '블랙홀처럼 토양 속 잠자고 있는 영양분을 끌어당겨 작물 뿌리에 전달하는 고농축 풀빅산·휴믹산 유기 바이오 토양개량제(1,000ml). 딱딱하게 굳은 땅을 스펀지처럼 부드럽게 바꿉니다.',
-        targetCrops: '연작 하우스 토양, 간척지·마사토 등 척박한 노지, 과수원, 마늘·양파·감자·고구마 구근류 전 작물',
+        badges: ['국내유일 냄새 제거율 90% 이상', '축사·퇴비장 암모니아 급속분해', '미생물 환경개선 · 완숙퇴비 촉진'],
+        shortDesc: '국내 유일 냄새 제거율 90% 이상을 구현한 환경·축산·토양 바이오 솔루션(1,000ml). 양돈장·양계장·우사·퇴비장의 악취 원인 물질(암모니아·황화수소)을 분자 단위로 급속 분해하고 가스 피해 없는 완숙 퇴비화와 토양 환경 개선을 동시에 해결합니다.',
+        targetCrops: '양돈장, 양계장, 축사(한우/젖소), 퇴비공장, 미숙퇴비 사용 농가(마늘·양파·고추·시설하우스 가스피해 예방)',
         dilution: {
-            farm500L: '500ml~1,000ml (관주 처리)',
-            knapsack20L: '20~40ml',
-            home1L: '2ml (분갈이 후 또는 오래된 화분 흙 재생)'
+            farm500L: '1,000ml (500배액 축사 바닥·퇴비장·토양 살포)',
+            knapsack20L: '40ml',
+            home1L: '2~5ml (가정용 퇴비함·반려동물 배변 악취 제거)'
         },
         mechanism: [
-            { step: 'STEP 01 · 토양 입단화(떼알구조) 형성', desc: '진흙처럼 굳거나 모래처럼 빠지는 토양 입자를 뭉쳐 통기성과 보수력을 동시에 확보합니다.' },
-            { step: 'STEP 02 · 천연 킬레이트 영양 블랙홀 작용', desc: '풀빅산 저분자 유기산이 토양 내 미량원소를 킬레이트화하여 비료 효율을 50% 이상 높입니다.' },
-            { step: 'STEP 03 · 지온 상승 및 유익 미생물 증식 터전 제공', desc: '근권 유익균의 먹이가 되어 건강한 생태 토양을 빠르게 재건합니다.' }
+            { step: 'STEP 01 · 악취 유발 가스(암모니아·황화수소) 90% 이상 급속 분해', desc: '일시적으로 냄새를 덮는 방향제가 아니라, 악취 분자 사슬을 직접 분해·중화하여 살포 즉시 쾌적한 환경을 만듭니다.' },
+            { step: 'STEP 02 · 유해 부패균 억제 및 가축 스트레스 저감', desc: '축사 내 유해 가스와 병원성 부패 세균을 줄여 가축의 호흡기 질환과 스트레스를 예방하고 폐사율을 낮춥니다.' },
+            { step: 'STEP 03 · 축분 고속 발효 및 농경지 가스장해 원천 차단', desc: '가축 분뇨를 악취 없는 고품질 완숙 퇴비로 빠르게 전환하여 작물 정식 후 뿌리 가스 피해를 막아줍니다.' }
         ],
-        goldenTime: '밑거름 시비 및 로터리 전·후 / 정식 직후 관주 / 생육 중기 추비 관주 시 혼용',
+        goldenTime: '축사 및 퇴비장 주 1~2회 정기 안개분무·살포 / 농경지 퇴비 살포 및 로터리 직전 처리',
         synergyId: 'goldwater-1000',
-        synergyReason: '[바이오 블랙홀]로 흙의 그릇을 넓히고 [황금수 프리미엄]으로 황금빛 생명 에너지를 채우면 죽은 땅도 옥토로 살아납니다.',
+        synergyReason: '[바이오 블랙홀]로 축사·토양 악취와 가스를 잡고 [유황수용액 황금수]로 내병성과 육질·작물 품질을 높이면 농축산 복합 경영의 완벽한 솔루션이 됩니다.',
         reviews: [
-            { author: '문*석 농가 (전북 고창 · 황토 호박고구마 5,000평)', rating: 5, date: '2026.09', text: '비 오면 질척거리고 마르면 돌덩이 같던 땅에 블랙홀 관주했더니 호미가 쑥쑥 들어가고 고구마 모양이 예술로 빠졌습니다.' }
+            { author: '문*석 대표 (전북 고창 · 한우 축사 및 사료작물 5,000평)', rating: 5, date: '2026.09', text: '축사 냄새 민원 때문에 고민이 많았는데 바이오 블랙홀 살포하고 나서 암모니아 눈 매운 냄새가 거짓말처럼 사라지고 퇴비도 빨리 썩습니다.' }
         ]
     },
     'goldwater-1000': {
         id: 'goldwater-1000',
         code: 'HZ-RX-15',
-        name: '황금수 프리미엄',
-        engName: 'GOLDEN WATER PREMIUM · BIO ENZYME ELIXIR',
+        name: '유황수용액 황금수',
+        engName: 'GOLDEN WATER · DETOXIFIED IONIC SULFUR SOLUTION',
         volume: '1000ml (대용량)',
         category: 'growth',
-        categoryLabel: '복합 효소 · 최고급 종합영양',
+        categoryLabel: '법제유황 수용액 · 내병성·품질향상',
         price: 30000,
         originalPrice: 38000,
         discountRate: 21,
-        image: 'assets/downloaded_41.jpg',
+        image: 'assets/prod_5.png',
         thumb: 'assets/downloaded_41.jpg',
-        badges: ['복합 생리활성 효소 + 아미노산', '대농가 1,000ml 가성비 끝판왕', '뿌리·잎·열매 전방위 올라운더'],
-        shortDesc: '하이존바이오 발효 효소 공학과 나노 미네랄 기술을 결합한 1,000ml 대용량 프리미엄 종합 활력제. 작물 생육 초기부터 수확기까지 전 주기에 걸쳐 폭발적인 생장 에너지와 다수확을 선사합니다.',
-        targetCrops: '시설·노지 원예작물, 수도작(벼), 과수류, 구근류, 엽채류 전 작물 올라운드 사용',
+        badges: ['무독성 법제유황 수용화 기술', '작물·축산 내병성 및 육질·품질개선', '특유향(마늘·양파·파) 및 저장성 증폭'],
+        shortDesc: '독성을 완전히 제거한 고순도 법제유황을 초미세 수용화한 1,000ml 프리미엄 유황수용액 보조제. 작물의 내병성(흰가루·녹병·곰팡이 저항성)과 마늘·양파·과채류의 향미·저장성을 극대화하며, 축산·양식 분야의 육질 개선 및 면역력 증진에도 탁월합니다.',
+        targetCrops: '마늘, 양파, 대파, 쪽파, 고추, 오이, 참외, 딸기, 과수류 및 축산(한우·양돈·양계)·내수면 양식 보조',
         dilution: {
             farm500L: '500ml~1,000ml (500~1,000배액 관주/엽면)',
             knapsack20L: '20~40ml',
-            home1L: '2ml'
+            home1L: '1~2ml'
         },
         mechanism: [
-            { step: 'STEP 01 · 고활성 효소 + 필수 아미노산 18종 즉각 공급', desc: '식물이 스스로 합성하는 데 소모되는 에너지를 아껴 과실 비대와 뿌리 발육에 집중시킵니다.' },
-            { step: 'STEP 02 · 양분 전환율 및 비료 흡수율 극대화', desc: '기존 관주 비료와 함께 줄 경우 비료 흡수 효율을 배가시키고 염류 집적을 예방합니다.' },
-            { step: 'STEP 03 · 수확량 증대 및 상품과 비율 95% 달성', desc: '크기·무게·당도·색택 등 농산물 등급을 결정짓는 4대 지표를 동시에 끌어올립니다.' }
+            { step: 'STEP 01 · 초미세 이온화 법제유황 (약해·노즐막힘 ZERO)', desc: '기존 유황제의 치명적 단점인 가스 약해와 분무기 노즐 막힘 없이 잎과 뿌리로 100% 부드럽게 흡수됩니다.' },
+            { step: 'STEP 02 · 시스테인·메티오닌 합성 및 알리신 향미 증폭', desc: '황 함유 아미노산과 글루타치온 합성을 촉진하여 마늘·양파·파의 매운맛(알리신)과 단단한 저장성을 극대화합니다.' },
+            { step: 'STEP 03 · 천연 내병성 강화 및 축산 육질·면역 개선', desc: '작물 표피의 병원균 저항력을 높이고, 가축 음수·사료 첨가 시 육질 등급과 면역 활력을 끌어올립니다.' }
         ],
-        goldenTime: '정식 후 활착기부터 수확 종료 시까지 10~14일 간격 상시 관리용',
+        goldenTime: '생육 초기부터 비대·수확기까지 10~14일 간격 상시 관리용',
         synergyId: 'blackhole-1000',
-        synergyReason: '[황금수 프리미엄]과 [바이오 블랙홀]은 대농가에서 가장 많이 세트로 주문하는 1,000ml 대용량 듀오입니다.',
+        synergyReason: '[유황수용액 황금수]와 [바이오 블랙홀]은 대농가 및 농축산 복합농가에서 가장 많이 세트로 주문하는 1,000ml 대용량 듀오입니다.',
         reviews: [
-            { author: '임*태 농가 (경북 성주 · 참외 하우스 12동)', rating: 5, date: '2026.08', text: '황금수 프리미엄은 이름값 그대로입니다. 참외 골이 선명하고 노란 황금빛이 돌아서 공판장 경매사들이 먼저 찾습니다.' }
+            { author: '임*태 농가 (경북 성주 · 참외·마늘 복합농가)', rating: 5, date: '2026.08', text: '황금수 쓰고 나서 참외 흰가루도 안 오고 마늘이 돌처럼 단단해서 저장 중 감모율이 확 줄었습니다.' }
         ]
     },
     'synergy-redsol-inca': {
@@ -516,7 +516,7 @@ const HIGHZONE_PRODUCTS = {
         price: 43000,
         originalPrice: 48000,
         discountRate: 10,
-        image: 'assets/prod_1.png',
+        image: 'assets/prod_redsol.png',
         thumb: 'assets/prod_redsol.jpg',
         badges: ['세트 특별할인 -5,000원', '뿌리활착 + 착과·경도 완벽조합', '무료 기술상담 포함'],
         shortDesc: '연작장해 토양 개량과 잔뿌리 발달의 절대강자 [바이오레드졸 500ml]와 인산·칼슘 이온 결합으로 착과·비대·경도를 완성하는 [에이스 인카 500ml]를 특별 할인가로 구성한 베스트셀러 시너지 세트.',
@@ -1227,8 +1227,8 @@ const HighzoneSystem = {
                 <div class="max-w-[560px] mx-auto space-y-4">
                     <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-800">
                         <div>
-                            <p class="text-white font-black text-sm">주식회사 하이존바이오 (HIGHZONE BIO)</p>
-                            <p class="text-[11px] text-emerald-400 font-bold">전주대학교 벤처창업관 산학협력 R&D 연구소 공식 직영몰</p>
+                            <p class="text-white font-black text-sm">유한회사 하이존바이오 (HIGHZONE BIO Co., Ltd.)</p>
+                            <p class="text-[11px] text-emerald-400 font-bold">전주대학교 벤처창업관 산학협력 R&D 연구소 · 과기부 인증 연구소기업 직영몰</p>
                         </div>
                         <a href="tel:063-855-5001" class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-black text-xs">
                             📞 대표전화 063-855-5001
@@ -1237,12 +1237,12 @@ const HighzoneSystem = {
 
                     <div class="grid grid-cols-2 gap-2 text-[11px] bg-slate-800/70 p-3 rounded-xl border border-slate-700/70">
                         <div>
-                            <span class="text-slate-400 block">원천 기술 특허</span>
-                            <strong class="text-white">특허 제10-2493517호</strong>
+                            <span class="text-slate-400 block">원천 기술 특허 · 벤처인증</span>
+                            <strong class="text-white">특허 제10-2493517호 · 벤처 제20230503030103호</strong>
                         </div>
                         <div>
-                            <span class="text-slate-400 block">공인 시험 인증</span>
-                            <strong class="text-emerald-300">KTR 99.9% 항균·살균 완료</strong>
+                            <span class="text-slate-400 block">공인 시험 · 유기농업자재</span>
+                            <strong class="text-emerald-300">KTR 99.9% 항균 · 공시-2-6-131</strong>
                         </div>
                         <div>
                             <span class="text-slate-400 block">출고 및 배송 안내</span>
@@ -1255,7 +1255,8 @@ const HighzoneSystem = {
                     </div>
 
                     <div class="text-[11px] text-slate-400 leading-relaxed space-y-1">
-                        <p><strong class="text-slate-200">연구소·물류 소재지:</strong> 전북특별자치도 전주시 완산구 천잠로 303 전주대학교 벤처창업관 #108 산학협력 R&D 연구소</p>
+                        <p><strong class="text-slate-200">상호 · 대표자:</strong> 유한회사 하이존바이오 | 대표이사: 김덕수 | 사업자등록번호: 707-81-02864 (법인등록번호: 210114-0163746)</p>
+                        <p><strong class="text-slate-200">연구소·본사 소재지:</strong> 전북특별자치도 전주시 완산구 천잠로 303, 1층 108호 (전주대학교 벤처창업관 산학협력 R&D 연구소)</p>
                         <p><strong class="text-slate-200">고객센터·대량납품 직통:</strong> <a href="tel:063-855-5001" class="text-amber-300 font-bold underline">063-855-5001</a> (평일 09:00~18:00) | <strong class="text-slate-200">긴급·문자 처방접수:</strong> <a href="sms:010-8201-7763" class="text-emerald-300 font-bold underline">010-8201-7763</a></p>
                         <p><strong class="text-slate-200">공식 이메일:</strong> partner@highzonebio.kr · info@highzonebio.com</p>
                         <p class="text-[10px] text-slate-500 pt-1">※ 반품·교환 안내: 제품 수령 후 7일 이내 고객센터(063-855-5001) 접수 (제품 불량·파손 시 왕복 배송비 당사 100% 부담)</p>
