@@ -28,5 +28,5 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://shop.highzonebio.com/sitemap.xml
-# AI / LLM Reference Catalog: https://shop.highzonebio.com/llms.txt
+Sitemap: https://shop.hizonebio.com/sitemap.xml
+# AI / LLM Reference Catalog: https://shop.hizonebio.com/llms.txt
