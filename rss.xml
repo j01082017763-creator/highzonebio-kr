@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>하이존바이오 공식 전문 쇼핑몰 (HIGHZONE BIO Official Mall)</title>
+    <link>https://shop.hizonebio.com/</link>
+    <description>특허 제10-2493517호 14종 바이오 처방 영양제, KTR 99.9% 항균 순수 은수용액, 수경재배 키트 및 무료 AI 식물병원</description>
+    <language>ko-KR</language>
+    <atom:link href="https://shop.hizonebio.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>쑥쑥자라미2 (PRO GROW · 500ml) — 특허 이온화 탄소 생육촉진 영양제</title>
+      <link>https://shop.hizonebio.com/product-detail.html?id=grow-500</link>
+      <description>전주대 R&amp;D 연구소 특허 탄소 담체 기술. 엽채류 잎 폭 확장 및 세근 발근 촉진. 500~1,000배 희석. 정가 22,000원.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/product-detail.html?id=grow-500</guid>
+    </item>
+    <item>
+      <title>바이오레드졸 (PRO ROOT · 500ml) — 시설하우스 연작장해 염류분해 발근제</title>
+      <link>https://shop.hizonebio.com/product-detail.html?id=redsol-500</link>
+      <description>불용성 염류 킬레이트 재분해, 뿌리 발근 200% 촉진, 냉해·가뭄 극복. 정가 28,000원.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/product-detail.html?id=redsol-500</guid>
+    </item>
+    <item>
+      <title>제5원소 도복왕 (The 5th Element · 100ml 고농축) — 벼 도복 0% 달성 쓰러짐 방지 규소제</title>
+      <link>https://shop.hizonebio.com/product-detail.html?id=dobok-100</link>
+      <description>5,000배 초고농축 이온 규소·칼슘. 수도작 이삭수 +24.5%, 낟알수 +41.0% 증수 실증. 정가 15,000원.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/product-detail.html?id=dobok-100</guid>
+    </item>
+    <item>
+      <title>순수 은수용액 Ag (PRO SHIELD · 500ml) — KTR 99.9% 제균 무농약 친환경 살균</title>
+      <link>https://shop.hizonebio.com/product-detail.html?id=silver-500</link>
+      <description>탄저병·흰가루병·잿빛곰팡이 물리적 호흡 효소 차단. 잔류 농약 걱정 없이 수확기 살포 가능. 정가 25,000원.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/product-detail.html?id=silver-500</guid>
+    </item>
+    <item>
+      <title>황금수 프리미엄 (PRO COLOR · 1000ml) — 당도(+2~4 Brix) 증대 및 고품질 착색제</title>
+      <link>https://shop.hizonebio.com/product-detail.html?id=goldwater-1000</link>
+      <description>고농축 유기 칼륨과 천연 미네랄 배합. 안토시아닌 발현, 과실 비대 및 저장성 향상. 정가 30,000원.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/product-detail.html?id=goldwater-1000</guid>
+    </item>
+    <item>
+      <title>닥터 그린 AI 식물병원 — 사진 1장으로 작물 질병 진단 및 1:1 맞춤 처방전</title>
+      <link>https://shop.hizonebio.com/ai-hospital.html</link>
+      <description>고추·토마토·배추·벼·과수 병충해 0.5초 AI 진단 및 물 500L/20L/1L 표준 희석표 무료 발급.</description>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0900</pubDate>
+      <guid>https://shop.hizonebio.com/ai-hospital.html</guid>
+    </item>
+  </channel>
+</rss>
